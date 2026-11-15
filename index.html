@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flame in Freefall</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="kitchen/style.css?v=meadow-20261114">
+<script type="importmap">
+{ "imports": { "three": "./vendor/three.module.js", "cannon-es": "./vendor/cannon-es.js", "three/addons/": "./vendor/addons/" } }
+</script>
+</head>
+<body>
+<canvas id="gl"></canvas>
+
+<nav id="dots" aria-label="Pages" hidden>
+  <button data-page="observe" class="on" aria-label="Observe"><i></i><span>observe</span></button>
+  <button data-page="detail" aria-label="Detail"><i></i><span>detail</span></button>
+  <button data-page="about" aria-label="About"><i></i><span>about</span></button>
+</nav>
+
+<section id="landing">
+  <h1>Flame in Freefall</h1>
+  <p>Same egg. Same pan. Different gravity.</p>
+  <button id="start">Start</button>
+</section>
+
+<section id="observe" class="page" hidden>
+  <div class="scenarios" id="scenarios"></div>
+  <div class="readout" id="readout"></div>
+</section>
+
+<section id="detail" class="page" hidden>
+  <article class="card" id="detailCard"></article>
+</section>
+
+<section id="about" class="page" hidden>
+  <article class="card">
+    <h2>About</h2>
+    <p>A kitchen with no walls, sitting in a field, so the only thing that changes between scenes is the gravity the flame feels.</p>
+    <p>Each scenario pulses a wave out from the flame. What the wave has passed is already living under the new gravity; what it has not reached is still under the old one. The closer the wavefront is to you, the harder the camera shakes.</p>
+    <p class="muted">Flame shapes here are schematic: height and colour follow a simple buoyancy heuristic, not a combustion model. Figures in the detail page are labelled with their source or marked unverified.</p>
+  </article>
+</section>
+
+<script type="module" src="kitchen/main.js?v=meadow-20261114"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+serve.log
+/release/
+/*-release/
+.DS_Store
+Thumbs.db
+
+# Temporary GitHub OIDC credentials generated during deployment
+gha-creds-*.json

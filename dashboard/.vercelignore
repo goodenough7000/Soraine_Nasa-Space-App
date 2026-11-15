@@ -1,0 +1,8 @@
+server/
+scripts/
+test/
+qa/
+node_modules/
+Dockerfile
+.gcloudignore
+*.md

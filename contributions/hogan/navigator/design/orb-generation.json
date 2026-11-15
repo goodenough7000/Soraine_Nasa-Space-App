@@ -1,0 +1,13 @@
+{
+  "job_id": "ab944c77-5719-4afd-a2c0-fc0bfc043f30",
+  "purpose": "Decorative orb for the research navigator",
+  "model": "seedance_2_5",
+  "mode": "t2v",
+  "aspect_ratio": "1:1",
+  "duration": 8,
+  "resolution": "720p",
+  "generate_audio": false,
+  "use_unlim": true,
+  "count": 1,
+  "prompt": "Create a premium 8-second seamless idle-loop asset for a scientific AI research navigator. One luminous, delicate, spherical intelligence orb is perfectly centered and stationary on an absolutely flat pure black background. Square canvas. Orb diameter is 54% of image width; all glow stays inside the middle 75% of the canvas, with broad completely black margins. A translucent dark core surrounded by thousands of tiny cyan-blue points and intricately interwoven fine fiber-optic filaments; elegant fluid field lines wrap around the sphere, cool ice-blue at the lower left and restrained indigo-violet at the upper right. Fine bright silhouette highlights, dark central negative space, luxurious restrained bloom. The filaments flow slowly and continuously around the stationary sphere like a calm magnetic field. Small lights travel along these paths at a measured pace. One gentle, very subtle inhale-exhale in luminosity, no size change. Start and end in matching orbital configuration to make an idle loop. Camera is locked off for all eight seconds: absolutely no zoom, no camera shake, no cut, no dolly, no pan. Keep the orb fixed in both size and location. Beautiful high-end cinematic CGI, thin precise luminous strands, sophisticated quiet energy. This is an abstract interface companion, not a planet and not fire. No text, numbers, lettering, logo, watermark, dashboard, hands, people, grids, planets, rings outside the orb, starfield, background gradients, particles drifting into the black margins, large flashes, hard strobes, or audio. The result must work as a subtle isolated decorative orb layer on a near-black web interface."
+}

@@ -1,0 +1,141 @@
+/* mobile-polish.css
+   Mobile UI, 3D sharpness and touch polish for Soraine: Flame in Freefall.
+   Load LAST, after layout-polish.css. Everything except section 1 sits inside
+   a max-width media query, so layouts from 768px up are untouched. */
+
+/* 1. Both 3D stages own their gestures (pairs with touch-orbit.mjs) --------- */
+#globe,
+.specimen .material-model {
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+/* The drawing buffer is now up to 2x the CSS size: the canvas must always be
+   scaled back to its box, never shown at buffer size. */
+#globe canvas,
+.specimen .material-model canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* 2. Phones and small tablets: touch targets and type hierarchy ------------- */
+@media (max-width: 767.98px) {
+  :root { --mp-divider: rgba(143, 202, 255, .2); }
+
+  /* Floating canvas controls: 44px circles with a visible edge */
+  .globe-actions,
+  .specimen-model-actions { display: flex; gap: 6px; }
+  .globe-actions button,
+  .specimen-model-actions button {
+    width: 44px; min-width: 44px; height: 44px; min-height: 44px;
+    border: 1px solid rgba(143, 202, 255, .24); border-radius: 50%;
+    background: rgba(5, 7, 13, .72); color: var(--text);
+  }
+  .globe-actions button:active,
+  .specimen-model-actions button:active {
+    background: rgba(22, 139, 255, .2); border-color: rgba(22, 139, 255, .65);
+  }
+
+  /* Main titles */
+  .workspace-heading h1 { font-weight: 650; letter-spacing: -.9px; }
+  .workspace-heading h1 em { font-weight: 400; }
+  .space-caption h2 { font-size: 36px; font-weight: 650; letter-spacing: -1.2px; line-height: 1.1; }
+  .focus-heading h2 { font-size: 32px; font-weight: 650; letter-spacing: -.8px; }
+
+  /* Eyebrows and section tags */
+  .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 1px; color: var(--soft); }
+  .mission-toolbar > .label,
+  .focus-panel > .label,
+  .reading-summary .label { font-size: 12px; font-weight: 700; letter-spacing: 1.4px; line-height: 1.5; }
+  .mission-toolbar > .label,
+  .focus-panel > .label { color: var(--text); }
+  .material-panel .panel-head { font-weight: 650; color: var(--text); }
+  .material-panel .panel-head .tiny { font-weight: 500; color: var(--soft); letter-spacing: .2px; }
+
+  /* Key numerical readouts */
+  .focus-values .limit-pair strong { font-size: 48px; font-weight: 600; letter-spacing: -1.4px; line-height: 1.15; }
+  .limit-pair .label { font-weight: 650; color: var(--soft); }
+  .space-label { font-weight: 600; }
+  .space-reference { font-size: 14px; font-weight: 650; }
+  .condition-list dt { color: var(--soft); }
+  .condition-list dd { font-weight: 600; color: var(--text); }
+
+  /* Body copy, badges and links: nothing washed out */
+  .focus-sub,
+  .reading-summary p,
+  .research-footnote p { color: var(--soft); }
+  .chip,
+  .chip .science-term { font-size: 11px; font-weight: 600; }
+  .world-picker button { font-size: 14px; font-weight: 500; }
+  .world-picker button.active { font-weight: 650; }
+  .material-list button { font-size: 13px; font-weight: 500; }
+  .material-list button.active { font-weight: 650; }
+  .research-shortcuts > span { font-weight: 600; color: var(--soft); }
+  .research-shortcuts button,
+  .text-link,
+  .material-library-link,
+  .specimen-source { font-weight: 500; }
+  .space-foot > span,
+  .specimen-gesture,
+  .specimen-caption { font-size: 12px; color: var(--soft); }
+  .specimen-material-label { font-weight: 600; }
+}
+
+/* 3. Stacked phone layout: breathing room and dividers --------------------- */
+@media (max-width: 700px) {
+  /* Header / search */
+  .workspace-heading { margin-bottom: 24px; }
+  .research-shortcuts { padding-bottom: 24px; }
+
+  /* 01 / Choose an environment */
+  .mission-toolbar { padding-block: 24px 16px; border-block-color: var(--mp-divider); }
+  .world-picker { margin-top: 12px; }
+
+  /* 3D planet stage: label row, canvas, title and controls stack instead of
+     overlapping, and the canvas keeps side lanes that still scroll the page. */
+  .mission-grid > .space-panel {
+    display: flex; flex-direction: column;
+    height: auto; min-height: 0; max-height: none;
+    padding: 24px 0;
+  }
+  .mission-grid > .space-panel::after { display: none; }
+  .space-panel > .space-top { position: static; order: 0; margin-bottom: 12px; }
+  .space-panel > #globe {
+    position: relative; inset: auto; order: 1;
+    width: auto; height: clamp(280px, 80vw, 340px); margin: 0 20px;
+  }
+  /* Feather the canvas edges so the starfield, and a zoomed-in planet, never end on a hard line. */
+  .space-panel > #globe canvas {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent), linear-gradient(180deg, transparent, #000 5%, #000 95%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent), linear-gradient(180deg, transparent, #000 5%, #000 95%, transparent);
+    mask-composite: intersect;
+  }
+  .space-panel > .space-caption { position: static; order: 2; margin-top: 16px; }
+  .space-panel > .space-foot { position: static; order: 3; margin-top: 12px; gap: 12px; }
+
+  /* Oxygen-limit comparison */
+  .research-column { padding: 28px 0 8px; border-top: 1px solid var(--mp-divider); }
+  .material-panel { padding-bottom: 28px; }
+
+  /* 02 / Material in focus */
+  .focus-panel { padding-top: 28px; border-top: 1px solid var(--mp-divider); }
+  .focus-heading { margin-top: 14px; }
+  .focus-sub { margin-bottom: 24px; }
+  .focus-inspector-grid .material-model {
+    width: auto; height: 230px; margin: 10px 20px 0;
+    border: 1px solid rgba(143, 202, 255, .14); border-radius: 10px;
+  }
+  .specimen-model-toolbar { padding: 10px 0; gap: 12px; }
+  .specimen-source { padding-block: 10px; }
+  .focus-inspector-grid .focus-values { margin-top: 24px; }
+  .focus-values .limit-pair { gap: 16px; }
+  .focus-values .condition-list { margin: 24px 0; }
+  .condition-list > div { padding-block: 12px; }
+
+  /* Read the result */
+  .reading-summary { margin-top: 28px; padding: 24px 0; border-top: 1px solid var(--mp-divider); border-bottom-color: var(--mp-divider); }
+  .research-footnote { margin-top: 24px; }
+}

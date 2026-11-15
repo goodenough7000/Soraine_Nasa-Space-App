@@ -1,0 +1,35 @@
+{
+  "file": "soraine-master-research.json",
+  "sha256": "766050d659525e470185abe039f5d9e8b518bdb964f49be45cea00b11de50245",
+  "checks": {
+    "PMMA cm/s normalized": true,
+    "SIBAL aircraft cm/s normalized": true,
+    "Melinex grade explicit": true,
+    "Saffire oxygen approximate": true,
+    "model not aircraft": true,
+    "negative CO preserved": true,
+    "Feier model revised estimate": true,
+    "Feier experimental revised estimate": true,
+    "original Ethan graph retained": true,
+    "planned missions excluded from results": true,
+    "input unchanged hogan": true,
+    "input unchanged ethan": true,
+    "input unchanged tony": true
+  },
+  "summary": {
+    "canonical_evidence_records": 89,
+    "findings": 8,
+    "concept_cards": 4,
+    "investigations": 24,
+    "sources": 52,
+    "evidence_kind_counts": {
+      "derived_difference": 9,
+      "experimental_fit": 6,
+      "experimental_limit_aggregate": 24,
+      "experimental_result": 26,
+      "experimental_summary": 2,
+      "model_parameter_or_estimate": 18,
+      "model_prediction": 4
+    }
+  }
+}

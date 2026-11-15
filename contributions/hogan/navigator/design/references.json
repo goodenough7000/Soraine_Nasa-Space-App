@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-14",
+  "direction": "Conversational research workspace with a Jarvis-style command bar, contextual evidence panels and continuous spatial transitions.",
+  "recommended_foundation": {
+    "name": "assistant-ui",
+    "repository": "https://github.com/assistant-ui/assistant-ui",
+    "license": "MIT",
+    "fit": "React assistant primitives, streaming and custom tool-result components. Use our experiment and comparison tools to navigate the existing research JSON.",
+    "tools_reference": "https://github.com/assistant-ui/assistant-ui/blob/main/apps/docs/content/docs/tools/index.mdx",
+    "scope": "Frontend foundation. A model backend and our data tools still need to be connected."
+  },
+  "motion": {
+    "repository": "https://github.com/motiondivision/motion",
+    "license": "MIT",
+    "performance_reference": "https://motion.dev/docs/performance",
+    "painting_reference": "https://web.dev/articles/animations-guide",
+    "proposed_behavior": [
+      "280-420 ms panel glides with restrained spring settling.",
+      "Keep a selected evidence card visually continuous as it expands into a comparison.",
+      "Use transform and opacity for the main movement; briefly apply a small blur to a moving panel, then restore crisp text.",
+      "Profile animation alongside the 3D scene on the target laptop. Reduce effects if the frame budget is exceeded.",
+      "Provide reduced-motion behavior and keep clicks responsive while previous transitions finish."
+    ]
+  },
+  "visual_references": [
+    {
+      "title": "Zentra.AI: Futuristic AI Workspace Dashboard",
+      "creator": "sandipdcc",
+      "url": "https://dribbble.com/shots/27162960-Zentra-AI-Futuristic-AI-Workspace-Dashboard",
+      "image_url": "https://cdn.dribbble.com/userupload/46994606/file/9d9078441b97cce8945392cb6186eef7.png",
+      "adapt": "Spatial arrangement, connected research cards and layered depth. Use fewer simultaneously visible panels in our app."
+    },
+    {
+      "title": "Next-Gen AI Interface: Dark Mode Dashboard",
+      "creator": "Gopal Chatterjee for Blend wrk",
+      "url": "https://dribbble.com/shots/27106517-Next-Gen-AI-Interface-Dark-Mode-Dashboard",
+      "adapt": "A centered assistant orb, dark blue palette, clear prompt area and restrained luminous accents."
+    },
+    {
+      "title": "AI Dashboard",
+      "creator": "Digcy",
+      "url": "https://dribbble.com/shots/26898396-AI-Dashboard",
+      "image_url": "https://cdn.dribbble.com/userupload/46107279/file/fc71d6066b8884591a7194d442985b46.png?resize=752x&vertical=center",
+      "adapt": "Readable result cards and a persistent bottom command area."
+    }
+  ],
+  "first_interaction_to_prototype": {
+    "prompt": "Compare Ultem on the Moon and Mars",
+    "flow": [
+      "The prompt bar settles into its dock.",
+      "Jarvis selects the Ultem evidence and opens the two published cases.",
+      "Two comparison panels glide into the research canvas.",
+      "A source control opens the original paper and test definitions.",
+      "Return to scene carries the existing selected object and destination IDs."
+    ],
+    "case_ids": ["olson-ultem-moon", "olson-ultem-mars"],
+    "object_id": "sample-ultem"
+  },
+  "attribution": "Designs are visual references by their credited creators. No design assets or repository code were copied into the app during this research step."
+}

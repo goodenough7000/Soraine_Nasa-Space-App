@@ -1,0 +1,12 @@
+{
+  "name": "soraine-mission-control",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check dist/app.mjs && node --check dist/globe.mjs",
+    "start": "node server/index.mjs"
+  }
+}

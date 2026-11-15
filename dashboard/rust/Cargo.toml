@@ -1,0 +1,15 @@
+[workspace]
+resolver = "2"
+members = ["soraine-core", "soraine-web", "soraine-server"]
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+
+# Small WebAssembly download; the server binary is fine with the same settings.
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

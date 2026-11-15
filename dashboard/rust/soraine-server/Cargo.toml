@@ -1,0 +1,18 @@
+[package]
+name = "soraine-server"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+description = "Soraine dashboard server: public assets plus the two research data routes. Port of dashboard/server/*.mjs."
+
+[dependencies]
+soraine-core = { path = "../soraine-core" }
+axum = { version = "0.8", default-features = false, features = ["http1", "tokio"] }
+futures-util = { version = "0.3", default-features = false, features = ["std"] }
+httpdate = "1"
+percent-encoding = "2"
+regex = "1"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "fs", "signal", "sync", "time"] }
+url = "2"

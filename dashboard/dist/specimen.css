@@ -1,0 +1,42 @@
+.specimen{min-width:0;margin:15px 0 20px;animation:specimen-in .3s ease-out both}
+.specimen-inspect{display:block;position:relative;width:100%;min-width:0;padding:0;text-align:left;background:transparent;border:0;border-radius:0;color:var(--text,#f1f2f4)}
+.specimen-caption{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:8px;line-height:1.5;letter-spacing:.7px;color:var(--muted,#a1a5af)}
+.specimen-material-label{display:inline-flex;align-items:center;gap:7px;text-align:right;font-size:9px;letter-spacing:0;color:var(--soft,#c8cbd2)}
+.specimen-inspect-arrow{font-size:14px;line-height:1;color:var(--cyan,#00b7ff);transition:transform .2s}
+.specimen-model{display:block;width:100%;height:103px;overflow:visible;pointer-events:none}
+.specimen-object{transform-origin:50% 60%;transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.specimen-inspect.is-interactive{cursor:pointer}
+.specimen-inspect.is-interactive:hover .specimen-object,.specimen-inspect.is-interactive:focus-visible .specimen-object{transform:translateY(-2px) rotate(-.6deg)}
+.specimen-inspect.is-interactive:hover .specimen-inspect-arrow{transform:translate(1px,-1px)}
+.specimen-inspect:focus-visible{outline:2px solid var(--accent,#168bff);outline-offset:5px}
+.specimen-axis{padding-top:3px;min-width:0}
+.specimen-axis-label{display:block;font-size:8px;line-height:1.5;color:var(--muted,#a1a5af);letter-spacing:.7px}
+.specimen-axis svg{display:block;width:100%;height:59px;overflow:visible;font-family:inherit}
+.specimen-axis-name{font-size:9px;fill:var(--soft,#c8cbd2);letter-spacing:.5px}
+.specimen-axis-track{fill:none;stroke:#273244;stroke-width:.8}
+.specimen-axis-tick{fill:none;stroke:#455166;stroke-width:.7}
+.specimen-axis-point{color:#168bff;stroke:currentColor;stroke-width:1.4}
+.specimen-axis-point circle{fill:var(--bg,#05070d)}
+.specimen-axis-point.moc{color:#00b7ff}
+.specimen-axis-point.moc circle{fill:currentColor;stroke:var(--bg,#05070d);stroke-width:1}
+.specimen-axis-unit{font-size:8px;fill:var(--muted,#a1a5af)}
+.specimen-axis-missing{font-size:8px;fill:var(--muted,#a1a5af)}
+@keyframes specimen-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media(max-width:359px){.specimen-caption{gap:8px;font-size:7.5px;letter-spacing:.3px}.specimen-material-label{font-size:8px}.specimen-model{height:98px}}
+@media(prefers-reduced-motion:reduce){.specimen{animation:none}.specimen-object,.specimen-inspect-arrow{transition:none}.specimen-inspect.is-interactive:hover .specimen-object,.specimen-inspect.is-interactive:focus-visible .specimen-object,.specimen-inspect.is-interactive:hover .specimen-inspect-arrow{transform:none}}
+
+/* The source record control is separate from the model's drag surface. */
+.specimen .material-model{position:relative;height:200px;width:100%;min-width:0;margin-top:6px;overflow:hidden;background:#05070d;cursor:grab;touch-action:pan-y pinch-zoom;outline-offset:3px}
+.specimen .material-model:active{cursor:grabbing}
+.specimen .material-model:focus-visible{outline:1px solid var(--cyan,#00b7ff)}
+.specimen .material-model>canvas{display:block;width:100%;height:100%}
+.specimen .material-model>.specimen-model{height:100%;width:100%}
+.specimen-model-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:31px;border-bottom:1px solid var(--line,#222936)}
+.specimen-gesture{color:var(--muted,#a1a5af);font-size:8px;letter-spacing:.2px}
+.specimen-model-actions{display:flex;gap:4px}
+.specimen-model-actions button{display:grid;place-items:center;width:30px;height:30px;padding:0;font-size:18px;line-height:1;color:var(--soft,#c8cbd2);border:0;background:none}
+.specimen-model-actions button:hover{color:var(--cyan,#00b7ff)}
+.specimen-source{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:32px;padding:4px 0;font-size:10px;color:var(--soft,#c8cbd2);background:none;border:0;text-align:left}
+.specimen-source span{color:var(--cyan,#00b7ff);font-size:14px}
+.specimen-source:hover{color:var(--cyan,#00b7ff)}
+@media(pointer:coarse){.specimen-model-actions button{min-width:36px;min-height:36px}.specimen-source{min-height:40px}}

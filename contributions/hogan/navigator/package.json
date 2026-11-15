@@ -1,0 +1,25 @@
+{
+  "name": "soraine-research-navigator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4319 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4319 --strictPort",
+    "test": "node ../research/validate.mjs && node --test test/*.test.mjs",
+    "test:browser": "node test/browser-qa.mjs && node test/scene-bridge.mjs",
+    "test:media": "node test/media-check.mjs",
+    "test:motion": "node test/motion-check.mjs"
+  },
+  "dependencies": {
+    "@assistant-ui/react": "^0.15.36",
+    "motion": "^14.14.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "vite": "^8.3.8"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

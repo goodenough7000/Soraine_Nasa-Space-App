@@ -1,0 +1,69 @@
+name: Dashboard checks and Google Cloud deployment
+
+on:
+  pull_request:
+    paths: ['dashboard/**', '.github/workflows/dashboard-deploy.yml']
+  push:
+    branches: [main]
+    paths: ['dashboard/**', '.github/workflows/dashboard-deploy.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dashboard-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - name: Research contracts and backend tests
+        working-directory: dashboard
+        run: |
+          node --test test/*.test.mjs
+          node --check server/index.mjs
+          node --check dist/app.mjs
+          node --check dist/globe.mjs
+          node --check dist/planet-materials.mjs
+
+  deploy:
+    needs: checks
+    if: github.repository == 'TonySama-BoiledCabbage/Soraine_Nasa-Space-App' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      PROJECT: project-89aca125-c9a5-4fdd-bb0
+      REGION: us-central1
+      IMAGE: us-central1-docker.pkg.dev/project-89aca125-c9a5-4fdd-bb0/cloud-run-source-deploy/soraine-dashboard
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3
+        with:
+          workload_identity_provider: projects/334840303039/locations/global/workloadIdentityPools/soraine-github/providers/team-main
+          service_account: soraine-github@project-89aca125-c9a5-4fdd-bb0.iam.gserviceaccount.com
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3
+      - name: Build and push dashboard image
+        run: |
+          gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
+          docker build --tag "$IMAGE:$GITHUB_SHA" dashboard
+          docker push "$IMAGE:$GITHUB_SHA"
+      - name: Update the public dashboard
+        run: |
+          gcloud run deploy soraine-dashboard \
+            --image "$IMAGE:$GITHUB_SHA" --project "$PROJECT" --region "$REGION" \
+            --service-account "soraine-dashboard@$PROJECT.iam.gserviceaccount.com" \
+            --min-instances 0 --max-instances 2 --memory 512Mi --cpu 1 \
+            --concurrency 40 --timeout 30 \
+            --update-env-vars "BQ_PROJECT=$PROJECT,BQ_DATASET=flame_in_freefall_2026" \
+            --quiet
+          URL=$(gcloud run services describe soraine-dashboard --project "$PROJECT" --region "$REGION" --format='value(status.url)')
+          curl --fail --retry 3 "$URL/healthz"
+          echo "Dashboard: $URL" >> "$GITHUB_STEP_SUMMARY"

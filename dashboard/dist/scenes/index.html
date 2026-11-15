@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soraine: Flame in Freefall</title>
+<meta name="description" content="Same spark. Different world. Follow one stove flame from a kitchen on Earth to orbit, the Moon and Mars.">
+<meta name="theme-color" content="#000000">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="scene-loading" class="scene-loading" role="status" aria-live="polite"><div class="loading-content"><span>SORAINE / FLAME IN FREEFALL</span><h2>Preparing your journey</h2><p id="loading-label">Starting the kitchen…</p><progress id="loading-progress" max="100" value="0" aria-label="Scene preparation progress"></progress><output id="loading-percent">0%</output><p>Preparing all four worlds before you begin.</p><button id="loading-retry" hidden onclick="location.reload()">Try again</button></div></div>
+<main id="stage" class="stage" data-scene="earth">
+  <!-- scene: one WebGL canvas -->
+  <div id="backdrop" class="backdrop" aria-hidden="true"></div>
+  <canvas id="scene" class="scene" aria-hidden="true"></canvas>
+  <div id="wipe" class="wipe" aria-hidden="true"></div>
+  <div id="ring" class="ring" aria-hidden="true"></div>
+  <div class="shade" aria-hidden="true"></div>
+  <div class="veil" aria-hidden="true"></div>
+
+  <!-- interface: plain HTML on top -->
+  <div class="ui" inert>
+<button id="controls-toggle" class="controls-toggle" type="button" aria-expanded="false" aria-controls="scene-controls">Controls</button>
+    <a class="team" href="#earth">Soraine</a>
+
+    <nav class="worlds" aria-label="Choose a world">
+      <button type="button" data-world="earth" aria-pressed="true">Earth</button>
+      <button type="button" data-world="moon" aria-pressed="false">Moon</button>
+      <button type="button" data-world="mars" aria-pressed="false">Mars</button>
+      <button type="button" data-world="orbit" aria-pressed="false">ISS</button>
+    </nav>
+
+    <nav id="pages" class="pages" aria-label="Views">
+      <button type="button" data-page="observe" aria-pressed="true">Observe</button>
+      <button type="button" data-page="detail" aria-pressed="false">Detail</button>
+      <button type="button" data-page="about" aria-pressed="false">About</button>
+    </nav>
+
+    <article id="detail-card" class="card" hidden></article>
+
+    <article id="about-card" class="card" hidden>
+      <h2>About</h2>
+      <p>The same stove, pan and egg in four places: a kitchen on Earth, the Moon, Mars and the ISS. Between them, the only thing that changes the physics is gravity.</p>
+      <p>Each change of world pulses a wave out from the flame. What the wave has passed is already living under the new gravity; what it has not reached is still under the old one. The closer the wavefront is to you, the harder the camera shakes.</p>
+      <p class="muted">Flame shapes here are schematic: height and width follow a simple buoyancy heuristic, not a combustion model. Figures in the detail view are labelled with their source or marked unverified.</p>
+      <p class="muted">Team Soraine, NASA Space Apps 2026. Gravity data, scan wave and loose-prop physics by Tony. The 3D scenes are stylised, not to scale, and were built in code with AI assistance (see the AI log in the project).</p>
+    </article>
+
+    <aside id="scene-controls" class="side" aria-label="Stove readout and controls" inert>
+      <header class="controls-heading"><div><span class="controls-eyebrow">GALLEY LAB</span><h2>Try something.</h2></div><button id="controls-close" type="button" aria-label="Close controls">×</button></header>
+      <p class="controls-hint">Choose an action. We’ll clear the view.</p>
+      <details id="lab" class="lab">
+        <summary>Readout: <span id="lab-world">Earth</span></summary>
+        <dl id="lab-facts" class="facts"></dl>
+        <dl class="facts">
+          <dt>Compared with Earth</dt><dd><span id="lab-ratio">1.00 g</span> <small class="src">computed</small></dd>
+          <dt>Fuel pressure</dt><dd>&mdash; <small class="src warn">no sourced value yet</small></dd>
+          <dt>Egg</dt><dd><span id="lab-egg">raw</span> <small class="src warn">illustration</small></dd>
+        </dl>
+        <p class="small">The valve changes the drawn flame only; no flow rate is modelled. The egg sets at the same speed in every world. Drop time is t = &radic;(2h/g) for 1 m with no air. The scan gives every loose prop the same small kick <small class="src warn">schematic</small>; gravity decides what happens next.</p>
+      </details>
+      <div class="quick">
+        <label class="valve" for="lab-valve">Burner valve <output id="lab-valve-out" for="lab-valve">100% open</output></label>
+        <input id="lab-valve" type="range" min="0" max="100" step="1" value="100">
+        <h3 class="control-group-title">Flame &amp; gravity</h3>
+        <div class="lab-row action-grid">
+          <button id="lab-ignite" data-scene-action type="button"><span aria-hidden="true">↟</span>Flare</button>
+          <button id="lab-drop" data-scene-action type="button"><span aria-hidden="true">↓</span>Drop 1 m</button>
+          <span class="fall" title="Fall time from 1 m, no air">Fall time: <span id="lab-fall">0.45 s</span></span>
+        </div>
+        <h3 class="control-group-title">At the pan</h3>
+        <div class="lab-row action-grid">
+          <button id="play-flip" data-scene-action type="button" title="Key: F"><span aria-hidden="true">↗</span>Flip the egg</button>
+          <button id="play-salt" data-scene-action type="button" title="Key: S"><span aria-hidden="true">⁙</span>Salt</button>
+          <button id="play-blow" data-scene-action type="button" title="Key: B"><span aria-hidden="true">≈</span>Blow</button>
+          <button id="lab-egg-reset" data-scene-action type="button"><span aria-hidden="true">↺</span>New egg</button>
+        </div>
+        <button id="lab-top" data-scene-action class="camera-action" type="button">Back to the scene view</button>
+      </div>
+    </aside>
+    <p id="play-out" class="play-out scene-feedback" role="status" aria-live="polite"></p>
+
+    <section class="hero">
+      <h1 id="title">Flame in Freefall</h1>
+      <p id="line" class="line">&ldquo;Same spark. Different world.&rdquo;</p>
+      <button id="go" class="go" type="button">Begin the journey</button>
+    </section>
+
+    <section id="info" class="info" hidden>
+      <h2 id="info-name"></h2>
+      <p id="info-text" class="line"></p>
+      <p id="info-note" class="note"></p>
+      <p class="note">Drag to turn it, scroll or pinch to zoom, or click a side of the cube.</p>
+      <button id="info-back" class="go" type="button">Back to the scene</button>
+    </section>
+
+    <div id="cube" class="viewcube" hidden>
+      <div id="cube-box" class="cube-box">
+        <button type="button" class="face f-top" data-view="top">Top</button>
+        <button type="button" class="face f-front" data-view="front">Front</button>
+        <button type="button" class="face f-right" data-view="right">Right</button>
+        <button type="button" class="face f-back" data-view="back">Back</button>
+        <button type="button" class="face f-left" data-view="left">Left</button>
+        <span class="face f-bottom" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="corner">
+      <p class="hint">Click the pan, the gas canister or the stove</p>
+      <p class="gravity" role="status" id="gravity">Earth · 1 g</p>
+    </div>
+  </div>
+</main>
+<noscript><p style="position:fixed;inset:0;display:grid;place-items:center;color:#fff;font-family:sans-serif">Soraine: Flame in Freefall needs JavaScript to draw the kitchen.</p></noscript>
+<script>
+/* Phones start in the light mode (no shadows, base resolution, worlds built one at a time); weak phones also skip the
+   scan-wave pass. Add ?hq to the address to force full quality, ?lite to force light. */
+(function () { var n = navigator, coarse = window.matchMedia && matchMedia('(pointer: coarse)').matches, hq = /[?&]hq\b/.test(location.search);
+  var low = (n.hardwareConcurrency && n.hardwareConcurrency <= 4 && coarse) || (n.deviceMemory && n.deviceMemory <= 3) || (n.connection && n.connection.saveData) || (coarse && !(window.CSS && CSS.supports && CSS.supports('height', '100dvh')));
+  window.SORAINE_LITE = !hq && (coarse || !!low); window.SORAINE_LOW = !hq && !!low; if (window.SORAINE_LOW) document.documentElement.classList.add('is-light'); })();
+</script>
+<script src="js/vendor/three.min.js"></script>
+<script>document.write('<script src="js/space-data' + (window.SORAINE_LITE ? '-lite' : '') + '.js"><\/script>');</script>
+<script src="js/kit.js"></script>
+<script src="js/physics-data.js"></script>
+<script src="js/props.js"></script>
+<script src="js/physics.js"></script>
+<script src="js/play.js"></script>
+<script src="js/vendor/cannon.js"></script>
+<script src="js/tony-props.js"></script>
+<script src="js/scenes/kitchen.js"></script>
+<script src="js/terrain-data.js"></script>
+<script src="js/outpost.js"></script>
+<script src="js/ground.js"></script>
+<script src="js/scenes/moon.js"></script>
+<script src="js/scenes/mars.js"></script>
+<script src="js/scenes/orbit.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/content.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

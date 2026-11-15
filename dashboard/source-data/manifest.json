@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bass",
+    "title": "BASS",
+    "investigation": "PSI-26",
+    "sourceId": "CSV-67a3768509ed061032c125fb",
+    "sourceUrl": "https://psi.nasa.gov/geode-py/ws/studies/PSI-26/download?file=67a3768509ed061032c125fb&version=1",
+    "sha256": "ccfc3c54d948b64a1c5d2596a63c7c8019e51df0c91a1d62f039f48fa28c300f",
+    "bytes": 4726,
+    "retrievedAt": "2026-11-15T14:56:05.581Z"
+  },
+  {
+    "id": "same-r",
+    "title": "SAME-R",
+    "investigation": "PSI-101",
+    "sourceId": "CSV-679a9e2209ed061032c0cd23",
+    "sourceUrl": "https://psi.nasa.gov/geode-py/ws/studies/PSI-101/download?file=679a9e2209ed061032c0cd23&version=1",
+    "sha256": "87164b7dc9168a4273c159f7a9f23699afbd06ad97b77974377e79b9bf8a3bef",
+    "bytes": 5674,
+    "retrievedAt": "2026-11-15T14:56:06.194Z"
+  },
+  {
+    "id": "saffire-i",
+    "title": "Saffire-I",
+    "investigation": "PSI-98",
+    "sourceId": "CSV-6792c46eb7b6ff8e65037f3e",
+    "sourceUrl": "https://psi.nasa.gov/geode-py/ws/studies/PSI-98/download?file=6792c46eb7b6ff8e65037f3e&version=1",
+    "sha256": "c01f29c62455f0a3b512290ab85e5687ecded326733189f002f580368402308d",
+    "bytes": 469,
+    "retrievedAt": "2026-11-15T14:56:06.785Z"
+  },
+  {
+    "id": "saffire-iii",
+    "title": "Saffire-III",
+    "investigation": "PSI-100",
+    "sourceId": "CSV-6792d422b7b6ff8e650381da",
+    "sourceUrl": "https://psi.nasa.gov/geode-py/ws/studies/PSI-100/download?file=6792d422b7b6ff8e650381da&version=1",
+    "sha256": "4d3c717ec20dd0247db670b2784a9fd7d746788bc54a936f80693e48eb8cd117",
+    "bytes": 239,
+    "retrievedAt": "2026-11-15T14:56:07.382Z"
+  }
+]

@@ -1,0 +1,969 @@
+{
+  "objectId": "sample-ultem",
+  "title": "Ultem film sample",
+  "role": "material",
+  "material": {
+    "id": "ultem-1000-film",
+    "label": "Ultem 1000",
+    "geometry": "10 mil (0.254 mm) film",
+    "record_ids": [
+      "olson2012-ultem-earth-moc",
+      "olson2012-ultem-earth-uloi",
+      "olson2012-ultem-microgravity-moc",
+      "olson2012-ultem-microgravity-uloi",
+      "olson2012-ultem-moon-moc",
+      "olson2012-ultem-moon-uloi",
+      "olson2012-ultem-mars-moc",
+      "olson2012-ultem-mars-uloi"
+    ]
+  },
+  "card": {
+    "id": "ultem",
+    "title": "Ultem 1000 film",
+    "summary": "Explore oxygen-limit tests on this specific PEI film.",
+    "sections": [
+      {
+        "heading": "Read the result",
+        "body": "The selected test lists its oxygen endpoint, pressure and apparatus. The star in ULOI* or MOC* identifies the short-duration reduced-gravity method."
+      },
+      {
+        "heading": "Application",
+        "body": "A sample is a link to material evidence. Its result does not rate an entire stove, handle or spacecraft."
+      }
+    ],
+    "source_ids": [
+      "NTRS-20130010991"
+    ],
+    "related_object_ids": []
+  },
+  "sceneConditions": {
+    "id": "moon",
+    "label": "Moon",
+    "gravity_nominal_g": 0.16,
+    "gravity_display": "about 1/6 g",
+    "default_atmosphere_id": "illustrative-air",
+    "atmosphere": {
+      "id": "illustrative-air",
+      "label": "Illustrative Earth-like cabin",
+      "oxygen_percent": 21,
+      "oxygen_basis": "volume percent",
+      "pressure_kpa_absolute": 101.325,
+      "airflow_mm_s": null,
+      "basis": "Design preset for an enclosed air-filled habitat. Not a measured Moon or Mars habitat.",
+      "source_ids": [
+        "NTRS-20130010991"
+      ]
+    }
+  },
+  "availableCases": [
+    {
+      "id": "olson-ultem-moon",
+      "label": "Ultem 1000 · Moon · oxygen limits"
+    }
+  ],
+  "selectedCase": {
+    "id": "olson-ultem-moon",
+    "material_id": "ultem-1000-film",
+    "scene_id": "moon",
+    "label": "Ultem 1000 · Moon · oxygen limits",
+    "record_ids": [
+      "olson2012-ultem-moon-uloi",
+      "olson2012-ultem-moon-moc"
+    ],
+    "metric_view": "oxygen_endpoints",
+    "compare_group": "olson-ultem",
+    "context": "Published short-drop endpoints",
+    "chart_mode": "separate_endpoint_markers",
+    "allow_scene_prediction": false
+  },
+  "evidenceState": "published_test",
+  "emptyMessage": null,
+  "measurements": [
+    {
+      "evidenceId": "olson2012-ultem-moon-uloi",
+      "metric": "ULOI*",
+      "label": "Survived the short drop",
+      "value": 21,
+      "displayValue": "21",
+      "unit": "% O2",
+      "explanation": "Lowest tested oxygen concentration where the flame survived the full drop.",
+      "evidenceType": "Reported test endpoint",
+      "sourceId": "NTRS-20130010991",
+      "sourceLocation": "Table I, p. 6"
+    },
+    {
+      "evidenceId": "olson2012-ultem-moon-moc",
+      "metric": "MOC*",
+      "label": "Extinguished during the drop",
+      "value": 19.9,
+      "displayValue": "19.9",
+      "unit": "% O2",
+      "explanation": "Highest tested oxygen concentration where the flame extinguished within the drop.",
+      "evidenceType": "Reported test endpoint",
+      "sourceId": "NTRS-20130010991",
+      "sourceLocation": "Table I, p. 6"
+    }
+  ],
+  "testConditions": [
+    {
+      "evidenceId": "olson2012-ultem-moon-uloi",
+      "material": "Ultem 1000",
+      "platform": "drop_tower_centrifuge",
+      "conditions": {
+        "gravity_label": "Moon",
+        "gravity_nominal_g": 0.16,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": null,
+        "oxygen_basis": "molar concentration, percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": 10.2,
+        "pressure_kpa": 70.32652,
+        "airflow_mm_s": null,
+        "pressure_conversion": "psia * 6.894757293168; display precision does not imply measurement precision",
+        "oxygen_role": "varied to determine the reported endpoint; see measurements"
+      },
+      "geometry": {
+        "id": "olson2012-ultem-moon",
+        "source_id": "olson2012",
+        "source_location": "Table I, p. 6",
+        "evidence_type": "measured_table",
+        "material_family_label": "Ultem 1000",
+        "tested_material": "Ultem 1000",
+        "thickness_mil": 10,
+        "thickness_mm": 0.254,
+        "low_gravity_frame_opening_cm": [
+          5,
+          15
+        ],
+        "gravity_label": "Moon",
+        "gravity_g_nominal": 0.16,
+        "pressure_psia": 10.2,
+        "oxygen_basis": "molar concentration, percent",
+        "moc_oxygen_pct": 19.9,
+        "uloi_oxygen_pct": 21,
+        "moc_label": "MOC*",
+        "uloi_label": "ULOI*",
+        "endpoint_protocol": "drop_duration",
+        "platform": "drop_tower_centrifuge",
+        "forced_flow_cm_s": null,
+        "flow_regime": "buoyant concurrent (upward)",
+        "drop_duration_s": 5.18,
+        "limitation_ids": [
+          "different_endpoint_protocols",
+          "short_drop_duration"
+        ],
+        "tony_context": {
+          "conditions": "10 mil PEI film",
+          "limitation": "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction.",
+          "pdf_page": 6,
+          "locator": "Table I; method definitions PDF pages 2-4"
+        }
+      },
+      "limitations": [
+        "Earth MOC/ULOI use burn-length and repeat-test criteria. Reduced-gravity MOC*/ULOI* describe extinction or survival during the short drop. They are not equivalent certification thresholds.",
+        "Survival for 5.18 seconds does not establish indefinite burning or a habitat safety limit.",
+        "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction."
+      ]
+    },
+    {
+      "evidenceId": "olson2012-ultem-moon-moc",
+      "material": "Ultem 1000",
+      "platform": "drop_tower_centrifuge",
+      "conditions": {
+        "gravity_label": "Moon",
+        "gravity_nominal_g": 0.16,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": null,
+        "oxygen_basis": "molar concentration, percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": 10.2,
+        "pressure_kpa": 70.32652,
+        "airflow_mm_s": null,
+        "pressure_conversion": "psia * 6.894757293168; display precision does not imply measurement precision",
+        "oxygen_role": "varied to determine the reported endpoint; see measurements"
+      },
+      "geometry": {
+        "id": "olson2012-ultem-moon",
+        "source_id": "olson2012",
+        "source_location": "Table I, p. 6",
+        "evidence_type": "measured_table",
+        "material_family_label": "Ultem 1000",
+        "tested_material": "Ultem 1000",
+        "thickness_mil": 10,
+        "thickness_mm": 0.254,
+        "low_gravity_frame_opening_cm": [
+          5,
+          15
+        ],
+        "gravity_label": "Moon",
+        "gravity_g_nominal": 0.16,
+        "pressure_psia": 10.2,
+        "oxygen_basis": "molar concentration, percent",
+        "moc_oxygen_pct": 19.9,
+        "uloi_oxygen_pct": 21,
+        "moc_label": "MOC*",
+        "uloi_label": "ULOI*",
+        "endpoint_protocol": "drop_duration",
+        "platform": "drop_tower_centrifuge",
+        "forced_flow_cm_s": null,
+        "flow_regime": "buoyant concurrent (upward)",
+        "drop_duration_s": 5.18,
+        "limitation_ids": [
+          "different_endpoint_protocols",
+          "short_drop_duration"
+        ],
+        "tony_context": {
+          "conditions": "10 mil PEI film",
+          "limitation": "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction.",
+          "pdf_page": 6,
+          "locator": "Table I; method definitions PDF pages 2-4"
+        }
+      },
+      "limitations": [
+        "Earth MOC/ULOI use burn-length and repeat-test criteria. Reduced-gravity MOC*/ULOI* describe extinction or survival during the short drop. They are not equivalent certification thresholds.",
+        "Survival for 5.18 seconds does not establish indefinite burning or a habitat safety limit.",
+        "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction."
+      ]
+    }
+  ],
+  "relatedFindings": [],
+  "relatedEvidence": [
+    {
+      "id": "olson2012-ultem-earth-moc",
+      "series": "olson_oxygen_limits",
+      "evidence_kind": "experimental_limit_aggregate",
+      "source_id": "NTRS-20130010991",
+      "source_location": "Table I, p. 6",
+      "material": "Ultem 1000",
+      "material_family": "Ultem 1000",
+      "platform": "ground",
+      "conditions": {
+        "gravity_label": "Earth",
+        "gravity_nominal_g": 1,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": null,
+        "oxygen_basis": "molar concentration, percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": 10.2,
+        "pressure_kpa": 70.32652,
+        "airflow_mm_s": null,
+        "pressure_conversion": "psia * 6.894757293168; display precision does not imply measurement precision",
+        "oxygen_role": "varied to determine the reported endpoint; see measurements"
+      },
+      "measurements": [
+        {
+          "metric": "MOC",
+          "value": 23,
+          "unit": "O2 molar percent"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Earth MOC/ULOI use burn-length and repeat-test criteria. Reduced-gravity MOC*/ULOI* describe extinction or survival during the short drop. They are not equivalent certification thresholds.",
+        "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/material_oxygen_endpoints/4"
+        },
+        {
+          "contributor": "tony",
+          "input_id": "tony",
+          "json_pointer": "/shared_research_metadata/curated_evidence/4"
+        }
+      ],
+      "details": {
+        "id": "olson2012-ultem-earth",
+        "source_id": "olson2012",
+        "source_location": "Table I, p. 6",
+        "evidence_type": "measured_table",
+        "material_family_label": "Ultem 1000",
+        "tested_material": "Ultem 1000",
+        "thickness_mil": 10,
+        "thickness_mm": 0.254,
+        "low_gravity_frame_opening_cm": null,
+        "gravity_label": "Earth",
+        "gravity_g_nominal": 1,
+        "pressure_psia": 10.2,
+        "oxygen_basis": "molar concentration, percent",
+        "moc_oxygen_pct": 23,
+        "uloi_oxygen_pct": 23.5,
+        "moc_label": "MOC",
+        "uloi_label": "ULOI",
+        "endpoint_protocol": "modified_nasa_test_1",
+        "platform": "ground",
+        "forced_flow_cm_s": null,
+        "flow_regime": "buoyant concurrent (upward)",
+        "drop_duration_s": null,
+        "limitation_ids": [
+          "different_endpoint_protocols"
+        ],
+        "tony_context": {
+          "conditions": "10 mil PEI film",
+          "limitation": "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction.",
+          "pdf_page": 6,
+          "locator": "Table I; method definitions PDF pages 2-4"
+        }
+      }
+    },
+    {
+      "id": "olson2012-ultem-earth-uloi",
+      "series": "olson_oxygen_limits",
+      "evidence_kind": "experimental_limit_aggregate",
+      "source_id": "NTRS-20130010991",
+      "source_location": "Table I, p. 6",
+      "material": "Ultem 1000",
+      "material_family": "Ultem 1000",
+      "platform": "ground",
+      "conditions": {
+        "gravity_label": "Earth",
+        "gravity_nominal_g": 1,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": null,
+        "oxygen_basis": "molar concentration, percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": 10.2,
+        "pressure_kpa": 70.32652,
+        "airflow_mm_s": null,
+        "pressure_conversion": "psia * 6.894757293168; display precision does not imply measurement precision",
+        "oxygen_role": "varied to determine the reported endpoint; see measurements"
+      },
+      "measurements": [
+        {
+          "metric": "ULOI",
+          "value": 23.5,
+          "unit": "O2 molar percent"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Earth MOC/ULOI use burn-length and repeat-test criteria. Reduced-gravity MOC*/ULOI* describe extinction or survival during the short drop. They are not equivalent certification thresholds.",
+        "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/material_oxygen_endpoints/4"
+        },
+        {
+          "contributor": "tony",
+          "input_id": "tony",
+          "json_pointer": "/shared_research_metadata/curated_evidence/1"
+        }
+      ],
+      "details": {
+        "id": "olson2012-ultem-earth",
+        "source_id": "olson2012",
+        "source_location": "Table I, p. 6",
+        "evidence_type": "measured_table",
+        "material_family_label": "Ultem 1000",
+        "tested_material": "Ultem 1000",
+        "thickness_mil": 10,
+        "thickness_mm": 0.254,
+        "low_gravity_frame_opening_cm": null,
+        "gravity_label": "Earth",
+        "gravity_g_nominal": 1,
+        "pressure_psia": 10.2,
+        "oxygen_basis": "molar concentration, percent",
+        "moc_oxygen_pct": 23,
+        "uloi_oxygen_pct": 23.5,
+        "moc_label": "MOC",
+        "uloi_label": "ULOI",
+        "endpoint_protocol": "modified_nasa_test_1",
+        "platform": "ground",
+        "forced_flow_cm_s": null,
+        "flow_regime": "buoyant concurrent (upward)",
+        "drop_duration_s": null,
+        "limitation_ids": [
+          "different_endpoint_protocols"
+        ],
+        "tony_context": {
+          "conditions": "10 mil PEI film",
+          "limitation": "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction.",
+          "pdf_page": 6,
+          "locator": "Table I; method definitions PDF pages 2-4"
+        }
+      }
+    },
+    {
+      "id": "olson2012-ultem-microgravity-moc",
+      "series": "olson_oxygen_limits",
+      "evidence_kind": "experimental_limit_aggregate",
+      "source_id": "NTRS-20130010991",
+      "source_location": "Table I, p. 6",
+      "material": "Ultem 1000",
+      "material_family": "Ultem 1000",
+      "platform": "drop_tower_forced_flow",
+      "conditions": {
+        "gravity_label": "Microgravity",
+        "gravity_nominal_g": 0,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": null,
+        "oxygen_basis": "molar concentration, percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": 10.2,
+        "pressure_kpa": 70.32652,
+        "airflow_mm_s": 300,
+        "pressure_conversion": "psia * 6.894757293168; display precision does not imply measurement precision",
+        "oxygen_role": "varied to determine the reported endpoint; see measurements"
+      },
+      "measurements": [
+        {
+          "metric": "MOC*",
+          "value": 23,
+          "unit": "O2 molar percent"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Earth MOC/ULOI use burn-length and repeat-test criteria. Reduced-gravity MOC*/ULOI* describe extinction or survival during the short drop. They are not equivalent certification thresholds.",
+        "Survival for 5.18 seconds does not establish indefinite burning or a habitat safety limit.",
+        "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/material_oxygen_endpoints/5"
+        },
+        {
+          "contributor": "tony",
+          "input_id": "tony",
+          "json_pointer": "/shared_research_metadata/curated_evidence/22"
+        }
+      ],
+      "details": {
+        "id": "olson2012-ultem-microgravity",
+        "source_id": "olson2012",
+        "source_location": "Table I, p. 6",
+        "evidence_type": "measured_table",
+        "material_family_label": "Ultem 1000",
+        "tested_material": "Ultem 1000",
+        "thickness_mil": 10,
+        "thickness_mm": 0.254,
+        "low_gravity_frame_opening_cm": [
+          5,
+          15
+        ],
+        "gravity_label": "Microgravity",
+        "gravity_g_nominal": 0,
+        "pressure_psia": 10.2,
+        "oxygen_basis": "molar concentration, percent",
+        "moc_oxygen_pct": 23,
+        "uloi_oxygen_pct": 24,
+        "moc_label": "MOC*",
+        "uloi_label": "ULOI*",
+        "endpoint_protocol": "drop_duration",
+        "platform": "drop_tower_forced_flow",
+        "forced_flow_cm_s": 30,
+        "flow_regime": "forced concurrent",
+        "drop_duration_s": 5.18,
+        "limitation_ids": [
+          "different_endpoint_protocols",
+          "short_drop_duration"
+        ],
+        "tony_context": {
+          "conditions": "10 mil PEI film",
+          "limitation": "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction.",
+          "pdf_page": 6,
+          "locator": "Table I; method definitions PDF pages 2-4"
+        }
+      }
+    },
+    {
+      "id": "olson2012-ultem-microgravity-uloi",
+      "series": "olson_oxygen_limits",
+      "evidence_kind": "experimental_limit_aggregate",
+      "source_id": "NTRS-20130010991",
+      "source_location": "Table I, p. 6",
+      "material": "Ultem 1000",
+      "material_family": "Ultem 1000",
+      "platform": "drop_tower_forced_flow",
+      "conditions": {
+        "gravity_label": "Microgravity",
+        "gravity_nominal_g": 0,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": null,
+        "oxygen_basis": "molar concentration, percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": 10.2,
+        "pressure_kpa": 70.32652,
+        "airflow_mm_s": 300,
+        "pressure_conversion": "psia * 6.894757293168; display precision does not imply measurement precision",
+        "oxygen_role": "varied to determine the reported endpoint; see measurements"
+      },
+      "measurements": [
+        {
+          "metric": "ULOI*",
+          "value": 24,
+          "unit": "O2 molar percent"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Earth MOC/ULOI use burn-length and repeat-test criteria. Reduced-gravity MOC*/ULOI* describe extinction or survival during the short drop. They are not equivalent certification thresholds.",
+        "Survival for 5.18 seconds does not establish indefinite burning or a habitat safety limit.",
+        "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/material_oxygen_endpoints/5"
+        },
+        {
+          "contributor": "tony",
+          "input_id": "tony",
+          "json_pointer": "/shared_research_metadata/curated_evidence/19"
+        }
+      ],
+      "details": {
+        "id": "olson2012-ultem-microgravity",
+        "source_id": "olson2012",
+        "source_location": "Table I, p. 6",
+        "evidence_type": "measured_table",
+        "material_family_label": "Ultem 1000",
+        "tested_material": "Ultem 1000",
+        "thickness_mil": 10,
+        "thickness_mm": 0.254,
+        "low_gravity_frame_opening_cm": [
+          5,
+          15
+        ],
+        "gravity_label": "Microgravity",
+        "gravity_g_nominal": 0,
+        "pressure_psia": 10.2,
+        "oxygen_basis": "molar concentration, percent",
+        "moc_oxygen_pct": 23,
+        "uloi_oxygen_pct": 24,
+        "moc_label": "MOC*",
+        "uloi_label": "ULOI*",
+        "endpoint_protocol": "drop_duration",
+        "platform": "drop_tower_forced_flow",
+        "forced_flow_cm_s": 30,
+        "flow_regime": "forced concurrent",
+        "drop_duration_s": 5.18,
+        "limitation_ids": [
+          "different_endpoint_protocols",
+          "short_drop_duration"
+        ],
+        "tony_context": {
+          "conditions": "10 mil PEI film",
+          "limitation": "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction.",
+          "pdf_page": 6,
+          "locator": "Table I; method definitions PDF pages 2-4"
+        }
+      }
+    },
+    {
+      "id": "olson2012-ultem-moon-moc",
+      "series": "olson_oxygen_limits",
+      "evidence_kind": "experimental_limit_aggregate",
+      "source_id": "NTRS-20130010991",
+      "source_location": "Table I, p. 6",
+      "material": "Ultem 1000",
+      "material_family": "Ultem 1000",
+      "platform": "drop_tower_centrifuge",
+      "conditions": {
+        "gravity_label": "Moon",
+        "gravity_nominal_g": 0.16,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": null,
+        "oxygen_basis": "molar concentration, percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": 10.2,
+        "pressure_kpa": 70.32652,
+        "airflow_mm_s": null,
+        "pressure_conversion": "psia * 6.894757293168; display precision does not imply measurement precision",
+        "oxygen_role": "varied to determine the reported endpoint; see measurements"
+      },
+      "measurements": [
+        {
+          "metric": "MOC*",
+          "value": 19.9,
+          "unit": "O2 molar percent"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Earth MOC/ULOI use burn-length and repeat-test criteria. Reduced-gravity MOC*/ULOI* describe extinction or survival during the short drop. They are not equivalent certification thresholds.",
+        "Survival for 5.18 seconds does not establish indefinite burning or a habitat safety limit.",
+        "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/material_oxygen_endpoints/6"
+        },
+        {
+          "contributor": "tony",
+          "input_id": "tony",
+          "json_pointer": "/shared_research_metadata/curated_evidence/16"
+        }
+      ],
+      "details": {
+        "id": "olson2012-ultem-moon",
+        "source_id": "olson2012",
+        "source_location": "Table I, p. 6",
+        "evidence_type": "measured_table",
+        "material_family_label": "Ultem 1000",
+        "tested_material": "Ultem 1000",
+        "thickness_mil": 10,
+        "thickness_mm": 0.254,
+        "low_gravity_frame_opening_cm": [
+          5,
+          15
+        ],
+        "gravity_label": "Moon",
+        "gravity_g_nominal": 0.16,
+        "pressure_psia": 10.2,
+        "oxygen_basis": "molar concentration, percent",
+        "moc_oxygen_pct": 19.9,
+        "uloi_oxygen_pct": 21,
+        "moc_label": "MOC*",
+        "uloi_label": "ULOI*",
+        "endpoint_protocol": "drop_duration",
+        "platform": "drop_tower_centrifuge",
+        "forced_flow_cm_s": null,
+        "flow_regime": "buoyant concurrent (upward)",
+        "drop_duration_s": 5.18,
+        "limitation_ids": [
+          "different_endpoint_protocols",
+          "short_drop_duration"
+        ],
+        "tony_context": {
+          "conditions": "10 mil PEI film",
+          "limitation": "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction.",
+          "pdf_page": 6,
+          "locator": "Table I; method definitions PDF pages 2-4"
+        }
+      }
+    },
+    {
+      "id": "olson2012-ultem-moon-uloi",
+      "series": "olson_oxygen_limits",
+      "evidence_kind": "experimental_limit_aggregate",
+      "source_id": "NTRS-20130010991",
+      "source_location": "Table I, p. 6",
+      "material": "Ultem 1000",
+      "material_family": "Ultem 1000",
+      "platform": "drop_tower_centrifuge",
+      "conditions": {
+        "gravity_label": "Moon",
+        "gravity_nominal_g": 0.16,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": null,
+        "oxygen_basis": "molar concentration, percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": 10.2,
+        "pressure_kpa": 70.32652,
+        "airflow_mm_s": null,
+        "pressure_conversion": "psia * 6.894757293168; display precision does not imply measurement precision",
+        "oxygen_role": "varied to determine the reported endpoint; see measurements"
+      },
+      "measurements": [
+        {
+          "metric": "ULOI*",
+          "value": 21,
+          "unit": "O2 molar percent"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Earth MOC/ULOI use burn-length and repeat-test criteria. Reduced-gravity MOC*/ULOI* describe extinction or survival during the short drop. They are not equivalent certification thresholds.",
+        "Survival for 5.18 seconds does not establish indefinite burning or a habitat safety limit.",
+        "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/material_oxygen_endpoints/6"
+        },
+        {
+          "contributor": "tony",
+          "input_id": "tony",
+          "json_pointer": "/shared_research_metadata/curated_evidence/13"
+        }
+      ],
+      "details": {
+        "id": "olson2012-ultem-moon",
+        "source_id": "olson2012",
+        "source_location": "Table I, p. 6",
+        "evidence_type": "measured_table",
+        "material_family_label": "Ultem 1000",
+        "tested_material": "Ultem 1000",
+        "thickness_mil": 10,
+        "thickness_mm": 0.254,
+        "low_gravity_frame_opening_cm": [
+          5,
+          15
+        ],
+        "gravity_label": "Moon",
+        "gravity_g_nominal": 0.16,
+        "pressure_psia": 10.2,
+        "oxygen_basis": "molar concentration, percent",
+        "moc_oxygen_pct": 19.9,
+        "uloi_oxygen_pct": 21,
+        "moc_label": "MOC*",
+        "uloi_label": "ULOI*",
+        "endpoint_protocol": "drop_duration",
+        "platform": "drop_tower_centrifuge",
+        "forced_flow_cm_s": null,
+        "flow_regime": "buoyant concurrent (upward)",
+        "drop_duration_s": 5.18,
+        "limitation_ids": [
+          "different_endpoint_protocols",
+          "short_drop_duration"
+        ],
+        "tony_context": {
+          "conditions": "10 mil PEI film",
+          "limitation": "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction.",
+          "pdf_page": 6,
+          "locator": "Table I; method definitions PDF pages 2-4"
+        }
+      }
+    },
+    {
+      "id": "olson2012-ultem-mars-moc",
+      "series": "olson_oxygen_limits",
+      "evidence_kind": "experimental_limit_aggregate",
+      "source_id": "NTRS-20130010991",
+      "source_location": "Table I, p. 6",
+      "material": "Ultem 1000",
+      "material_family": "Ultem 1000",
+      "platform": "drop_tower_centrifuge",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": null,
+        "oxygen_basis": "molar concentration, percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": 10.2,
+        "pressure_kpa": 70.32652,
+        "airflow_mm_s": null,
+        "pressure_conversion": "psia * 6.894757293168; display precision does not imply measurement precision",
+        "oxygen_role": "varied to determine the reported endpoint; see measurements"
+      },
+      "measurements": [
+        {
+          "metric": "MOC*",
+          "value": 21.1,
+          "unit": "O2 molar percent"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Earth MOC/ULOI use burn-length and repeat-test criteria. Reduced-gravity MOC*/ULOI* describe extinction or survival during the short drop. They are not equivalent certification thresholds.",
+        "Survival for 5.18 seconds does not establish indefinite burning or a habitat safety limit.",
+        "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/material_oxygen_endpoints/7"
+        },
+        {
+          "contributor": "tony",
+          "input_id": "tony",
+          "json_pointer": "/shared_research_metadata/curated_evidence/10"
+        }
+      ],
+      "details": {
+        "id": "olson2012-ultem-mars",
+        "source_id": "olson2012",
+        "source_location": "Table I, p. 6",
+        "evidence_type": "measured_table",
+        "material_family_label": "Ultem 1000",
+        "tested_material": "Ultem 1000",
+        "thickness_mil": 10,
+        "thickness_mm": 0.254,
+        "low_gravity_frame_opening_cm": [
+          5,
+          15
+        ],
+        "gravity_label": "Mars",
+        "gravity_g_nominal": 0.38,
+        "pressure_psia": 10.2,
+        "oxygen_basis": "molar concentration, percent",
+        "moc_oxygen_pct": 21.1,
+        "uloi_oxygen_pct": 22,
+        "moc_label": "MOC*",
+        "uloi_label": "ULOI*",
+        "endpoint_protocol": "drop_duration",
+        "platform": "drop_tower_centrifuge",
+        "forced_flow_cm_s": null,
+        "flow_regime": "buoyant concurrent (upward)",
+        "drop_duration_s": 5.18,
+        "limitation_ids": [
+          "different_endpoint_protocols",
+          "short_drop_duration"
+        ],
+        "tony_context": {
+          "conditions": "10 mil PEI film",
+          "limitation": "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction.",
+          "pdf_page": 6,
+          "locator": "Table I; method definitions PDF pages 2-4"
+        }
+      }
+    },
+    {
+      "id": "olson2012-ultem-mars-uloi",
+      "series": "olson_oxygen_limits",
+      "evidence_kind": "experimental_limit_aggregate",
+      "source_id": "NTRS-20130010991",
+      "source_location": "Table I, p. 6",
+      "material": "Ultem 1000",
+      "material_family": "Ultem 1000",
+      "platform": "drop_tower_centrifuge",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": null,
+        "oxygen_basis": "molar concentration, percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": 10.2,
+        "pressure_kpa": 70.32652,
+        "airflow_mm_s": null,
+        "pressure_conversion": "psia * 6.894757293168; display precision does not imply measurement precision",
+        "oxygen_role": "varied to determine the reported endpoint; see measurements"
+      },
+      "measurements": [
+        {
+          "metric": "ULOI*",
+          "value": 22,
+          "unit": "O2 molar percent"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Earth MOC/ULOI use burn-length and repeat-test criteria. Reduced-gravity MOC*/ULOI* describe extinction or survival during the short drop. They are not equivalent certification thresholds.",
+        "Survival for 5.18 seconds does not establish indefinite burning or a habitat safety limit.",
+        "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/material_oxygen_endpoints/7"
+        },
+        {
+          "contributor": "tony",
+          "input_id": "tony",
+          "json_pointer": "/shared_research_metadata/curated_evidence/7"
+        }
+      ],
+      "details": {
+        "id": "olson2012-ultem-mars",
+        "source_id": "olson2012",
+        "source_location": "Table I, p. 6",
+        "evidence_type": "measured_table",
+        "material_family_label": "Ultem 1000",
+        "tested_material": "Ultem 1000",
+        "thickness_mil": 10,
+        "thickness_mm": 0.254,
+        "low_gravity_frame_opening_cm": [
+          5,
+          15
+        ],
+        "gravity_label": "Mars",
+        "gravity_g_nominal": 0.38,
+        "pressure_psia": 10.2,
+        "oxygen_basis": "molar concentration, percent",
+        "moc_oxygen_pct": 21.1,
+        "uloi_oxygen_pct": 22,
+        "moc_label": "MOC*",
+        "uloi_label": "ULOI*",
+        "endpoint_protocol": "drop_duration",
+        "platform": "drop_tower_centrifuge",
+        "forced_flow_cm_s": null,
+        "flow_regime": "buoyant concurrent (upward)",
+        "drop_duration_s": 5.18,
+        "limitation_ids": [
+          "different_endpoint_protocols",
+          "short_drop_duration"
+        ],
+        "tony_context": {
+          "conditions": "10 mil PEI film",
+          "limitation": "1g ULOI/MOC use statistical burn criteria; low-g starred limits use drop-time survival/extinction; not equivalent safety certifications. Other-gravity rows partly reproduce earlier work. Unknown replicate counts. No exact habitat prediction.",
+          "pdf_page": 6,
+          "locator": "Table I; method definitions PDF pages 2-4"
+        }
+      }
+    }
+  ],
+  "comparisonCases": [
+    {
+      "id": "olson-ultem-earth",
+      "material_id": "ultem-1000-film",
+      "scene_id": "earth",
+      "label": "Ultem 1000 · Earth · oxygen limits",
+      "record_ids": [
+        "olson2012-ultem-earth-uloi",
+        "olson2012-ultem-earth-moc"
+      ],
+      "metric_view": "oxygen_endpoints",
+      "compare_group": "olson-ultem",
+      "context": "Published modified ground-test endpoints",
+      "chart_mode": "separate_endpoint_markers",
+      "allow_scene_prediction": false
+    },
+    {
+      "id": "olson-ultem-mars",
+      "material_id": "ultem-1000-film",
+      "scene_id": "mars",
+      "label": "Ultem 1000 · Mars · oxygen limits",
+      "record_ids": [
+        "olson2012-ultem-mars-uloi",
+        "olson2012-ultem-mars-moc"
+      ],
+      "metric_view": "oxygen_endpoints",
+      "compare_group": "olson-ultem",
+      "context": "Published short-drop endpoints",
+      "chart_mode": "separate_endpoint_markers",
+      "allow_scene_prediction": false
+    },
+    {
+      "id": "olson-ultem-microgravity",
+      "material_id": "ultem-1000-film",
+      "scene_id": "microgravity",
+      "label": "Ultem 1000 · Microgravity · oxygen limits",
+      "record_ids": [
+        "olson2012-ultem-microgravity-uloi",
+        "olson2012-ultem-microgravity-moc"
+      ],
+      "metric_view": "oxygen_endpoints",
+      "compare_group": "olson-ultem",
+      "context": "Published short-drop endpoints",
+      "chart_mode": "separate_endpoint_markers",
+      "allow_scene_prediction": false
+    }
+  ],
+  "scope": "These are published test results. The selected scene atmosphere does not modify them.",
+  "sources": [
+    {
+      "id": "NTRS-20130010991",
+      "title": "Evaluating Material Flammability in Microgravity and Martian Gravity Compared to the NASA Standard Normal Gravity Test",
+      "url": "https://ntrs.nasa.gov/citations/20130010991",
+      "alternate_urls": []
+    }
+  ],
+  "animationPolicy": "illustrative_only"
+}

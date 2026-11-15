@@ -1,0 +1,9 @@
+/* Older phones (see compat.js). Loaded last so it can override. */
+/* 1. <dialog> stand-in where the browser has none */
+.no-dialog dialog{display:none;position:fixed;top:0;right:0;bottom:0;left:auto;z-index:1000;margin:0;overflow-y:auto;-webkit-overflow-scrolling:touch;box-shadow:0 0 0 100vmax rgba(0,0,0,.6)}
+.no-dialog dialog[open]{display:block}
+.dialog-open,.dialog-open body{overflow:hidden}
+/* 2. weak devices: no live blur behind panels, no long decorative motion */
+[data-device=low] *,[data-device=low] *::before,[data-device=low] *::after{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+[data-device=low] *,[data-device=low] *::before,[data-device=low] *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.12s!important}
+[data-device=low] dialog{background:#0b1423}

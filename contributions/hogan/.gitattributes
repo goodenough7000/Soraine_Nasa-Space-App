@@ -1,0 +1,7 @@
+* text=auto eol=lf
+# Preserve original bytes used by the provenance hash checks on every platform.
+research/soraine-information.json -text whitespace=cr-at-eol
+research/archive/soraine-master-research.json -text whitespace=cr-at-eol
+*.mp4 -text
+*.jpg -text
+*.woff2 -text

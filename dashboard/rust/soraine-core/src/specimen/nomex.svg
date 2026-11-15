@@ -1,0 +1,18 @@
+<svg class="specimen-model" viewBox="0 0 360 124" aria-hidden="true" focusable="false"><defs>
+ <radialGradient id="{id}-shadow"><stop stop-color="#000" stop-opacity=".55"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+ <linearGradient id="{id}-amber" x1=".15" y1="0" x2=".78" y2="1"><stop stop-color="#ffe2a1"/><stop offset=".34" stop-color="#dca346"/><stop offset=".65" stop-color="#f5cf84"/><stop offset="1" stop-color="#a76320"/></linearGradient>
+ <linearGradient id="{id}-amber-edge"><stop stop-color="#915520"/><stop offset=".5" stop-color="#eab160"/><stop offset="1" stop-color="#744115"/></linearGradient>
+ <linearGradient id="{id}-glass" x1="0" y1=".2" x2="1" y2=".85"><stop stop-color="#b3d6ef" stop-opacity=".28"/><stop offset=".24" stop-color="#e9f6ff" stop-opacity=".85"/><stop offset=".38" stop-color="#7aa6d2" stop-opacity=".32"/><stop offset=".57" stop-color="#bcd8fb" stop-opacity=".5"/><stop offset=".74" stop-color="#f5faff" stop-opacity=".94"/><stop offset="1" stop-color="#728db8" stop-opacity=".3"/></linearGradient>
+ <linearGradient id="{id}-silver" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f2faff"/><stop offset=".42" stop-color="#7791ae"/><stop offset="1" stop-color="#d8edff"/></linearGradient>
+ <linearGradient id="{id}-cloth" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#e4dfd2"/><stop offset=".6" stop-color="#bfb8a8"/><stop offset="1" stop-color="#969184"/></linearGradient>
+ <linearGradient id="{id}-fold"><stop stop-color="#7e796e"/><stop offset=".55" stop-color="#c5bead"/><stop offset="1" stop-color="#eee7d6"/></linearGradient>
+ <pattern id="{id}-weave" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M0 1H5M1 0V5" stroke="#615e56" stroke-opacity=".25" stroke-width="1.2"/><path d="M0 3.5H5M3.5 0V5" stroke="#fff8e9" stroke-opacity=".38" stroke-width=".8"/></pattern>
+ </defs><ellipse cx="185" cy="106" rx="128" ry="17" fill="url(#{id}-shadow)"/><g class="specimen-object">
+ <path d="M104 34L242 22L281 80L234 105L82 90Z" fill="#716c61"/>
+ <path d="M104 30L242 18L280 76L233 101L82 86Z" fill="url(#{id}-cloth)" stroke="#ded8c9" stroke-width=".8"/>
+ <path d="M104 30L242 18L280 76L233 101L82 86Z" fill="url(#{id}-weave)"/>
+ <path d="M242 18Q236 45 258 59L280 76Z" fill="url(#{id}-fold)"/>
+ <path d="M242 18Q236 45 258 59L280 76" fill="none" stroke="#f6edda" stroke-opacity=".7"/>
+ <path d="M106 35L235 25M89 82L232 95L270 77" fill="none" stroke="#f3ecdc" stroke-opacity=".5" stroke-width="1" stroke-dasharray="2 3"/>
+ <path d="M96 87L94 93M104 88L102 94M115 89L113 95M126 90L125 96M137 91L136 97M149 92L148 98M161 93L160 99M174 94L173 100M187 96L186 101M200 97L199 102M213 98L212 103" stroke="#c3bcab" stroke-opacity=".65" stroke-width=".8"/>
+ </g></svg>

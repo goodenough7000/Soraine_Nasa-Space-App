@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#05070d">
+  <title>Soraine | Fire Safety Beyond Earth</title>
+  <meta name="description" content="Explore NASA combustion research across Earth, microgravity, Moon and Mars. Compare reported material limits and trace every result to its source.">
+  <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
+  <script src="./compat.js?v=1"></script>
+  <link rel="preload" href="./pkg/soraine_web_bg.wasm" as="fetch" type="application/wasm" crossorigin>
+  <link rel="modulepreload" href="./pkg/soraine_web.js">
+  <link rel="stylesheet" href="./observatory.css?v=4">
+  <link rel="stylesheet" href="./observatory-responsive.css?v=4">
+  <link rel="stylesheet" href="./audio.css?v=1">
+  <link rel="stylesheet" href="./glossary.css?v=1">
+  <link rel="stylesheet" href="./specimen.css?v=1">
+  <link rel="stylesheet" href="./original-data.css?v=1">
+  <link rel="stylesheet" href="./research-flow.css?v=1">
+  <link rel="stylesheet" href="./layout-polish.css?v=1">
+  <link rel="stylesheet" href="./mobile-polish.css?v=1">
+  <link rel="stylesheet" href="./scenes.css?v=1">
+  <link rel="stylesheet" href="./compat.css?v=1">
+</head>
+<body>
+  <a class="skip" href="#workspace">Skip to research</a>
+  <header class="topbar">
+    <a class="brand" href="#overview" data-view="overview" aria-label="Soraine overview"><img src="./assets/mark.svg" alt="" width="37" height="37"><span>SORAINE<small>FLAME IN FREEFALL</small></span></a>
+    <nav class="main-nav" aria-label="Research views">
+      <button data-view="overview" class="active">Overview</button><button data-view="experiments">Original data</button><button data-view="compare">Compare</button><button data-view="evidence">Evidence</button><button data-view="sources">Sources</button><button data-view="scenes">3D scenes</button>
+    </nav>
+    <div class="header-actions"><span class="connection"><i></i> BigQuery snapshot</span>
+      <div class="sound-player" id="sound-player">
+        <button class="sound-toggle" id="sound-toggle" aria-label="Music controls" aria-expanded="false" aria-controls="sound-controls" title="Music controls"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13M9 8l11-2M9 18c0 2-6 3-6 0s6-3 6 0m11-2c0 2-6 3-6 0s6-3 6 0"/></svg><i aria-hidden="true"></i></button>
+        <section class="sound-controls" id="sound-controls" aria-label="Background music" hidden>
+          <div class="sound-heading"><div><span class="sound-eyebrow">SORAINE SOUNDTRACK</span><h2>Quiet Orbit</h2><p>Original ambient waltz</p></div><button class="sound-close" id="sound-close" aria-label="Close music controls">×</button></div>
+          <div class="sound-transport"><button id="sound-play" class="sound-play" aria-pressed="false"><span id="sound-play-icon" aria-hidden="true">▶</span><span id="sound-play-label">Play music</span></button><button id="sound-mute" class="sound-mute" aria-label="Mute music" aria-pressed="false" title="Mute music"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4 5 9H2v6h3l6 5V4m4 4q4 4 0 8m3-11q7 7 0 14"/></svg></button></div>
+          <label class="sound-volume-label" for="sound-volume">Volume <output id="sound-volume-value" for="sound-volume">22%</output></label>
+          <input id="sound-volume" class="sound-volume" type="range" min="0" max="100" step="1" value="22">
+          <p class="sound-status" id="sound-status" role="status">Ready when you are.</p>
+        </section>
+      </div>
+      <button class="icon-btn" id="about-btn" aria-label="About this data and credits" title="About this data"><span data-icon="info"></span></button><button class="export-btn" id="export-all"><span data-icon="download"></span><span>Export data</span></button></div>
+  </header>
+  <main id="workspace" tabindex="-1">
+    <div class="workspace-heading"><div><div class="eyebrow">SORAINE OBSERVATORY <span>/</span> NASA SPACE APPS 2026</div><h1>Fire safety, <em>beyond Earth.</em></h1></div><div class="workspace-intro"><p>Choose a material. Follow the evidence.</p><label class="global-search"><span data-icon="search"></span><input id="global-search" placeholder="Try “Ultem on Moon”" aria-label="Find a material, world or source"><kbd>/</kbd></label></div></div>
+    <nav class="research-shortcuts" aria-label="Research starting points"><span>Start with a question</span><button data-research-question="compare Ultem Moon Mars" aria-label="Compare Ultem on Moon and Mars">Moon vs Mars <span aria-hidden="true">↗</span></button><button data-research-question="original BASS" aria-label="Explore the original BASS-II records">BASS-II records <span aria-hidden="true">↗</span></button><button data-browse-materials="true">Which materials have data? <span aria-hidden="true">↗</span></button></nav>
+    <div id="view" aria-live="polite"><div class="loading-state"><span class="loading-orbit"></span>Loading the research archive…</div></div>
+    <footer><span><i class="status-dot"></i> TEAM SORAINE <span class="footer-divider">/</span> NASA combustion evidence</span><span id="snapshot-date">Reading snapshot…</span><button id="credits-btn">Data & credits <span aria-hidden="true">↗</span></button></footer>
+  </main>
+  <dialog id="detail-dialog" aria-labelledby="detail-title"><button class="dialog-close icon-btn" aria-label="Close details">×</button><div id="detail-content"></div></dialog>
+  <div id="toast" role="status"></div>
+  <audio id="ambient-audio" loop preload="none"></audio>
+  <script type="module">
+    // The page runs from the Rust build (WebAssembly). If that cannot load, the JavaScript build takes over.
+    import('./pkg/soraine_web.js').then(async wasm => { await wasm.default(); return wasm; })
+      .then(wasm => wasm.startPage(), error => { console.warn('Rust build unavailable; using the JavaScript build.', error); return import('./app.mjs'); });
+  </script>
+  <script type="module" src="./audio.mjs?v=1"></script>
+</body>
+</html>

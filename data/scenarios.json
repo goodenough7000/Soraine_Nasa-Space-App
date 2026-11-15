@@ -1,0 +1,250 @@
+{
+  "note": "g values: NASA planetary fact sheets (Earth 9.81, Mars 3.71, Moon 1.62). ISS: effective microgravity ~1e-6 g, quoted as ~0 for display. Flame shape fields are schematic heuristics for the visual, not measurements. ground/grassCol are flat placeholder terrain colours; grass is the fraction of grass that survives the sweep (visual only). terrain: low-poly procedural concept models from Blender (not survey data); offset places the kitchen on a flat, rock-free patch found by a height search over each GLB. Moon/ISS fog values mean \"no fog\" (vacuum).",
+  "scenarios": [
+    {
+      "slug": "earth",
+      "label": "Earth",
+      "g": 9.81,
+      "sky": [
+        0.42,
+        0.62,
+        0.9
+      ],
+      "horizon": [
+        0.84,
+        0.86,
+        0.82
+      ],
+      "sun": [
+        1.0,
+        0.95,
+        0.86
+      ],
+      "sunElev": 44,
+      "sunAz": 40,
+      "flame": {
+        "height": 1.0,
+        "width": 1.0,
+        "blue": 0.0,
+        "sphere": 0.0,
+        "flicker": 1.0
+      },
+      "facts": [
+        {
+          "k": "Gravity",
+          "v": "9.81 m/s²",
+          "src": "NASA fact sheet"
+        },
+        {
+          "k": "Flame shape",
+          "v": "teardrop, buoyant plume",
+          "src": "schematic"
+        },
+        {
+          "k": "Hot gas rises",
+          "v": "yes, fast convection",
+          "src": "schematic"
+        }
+      ],
+      "ground": [
+        0.1,
+        0.14,
+        0.04
+      ],
+      "fogNear": 18,
+      "fogFar": 110,
+      "terrain": {
+        "model": "models/planet_surfaces/earth.glb",
+        "kind": "meadow",
+        "offset": [
+          0.0,
+          0.479,
+          -12.0
+        ],
+        "src": "Tony's Blender meadow (generate_grassland.py) + meadow-wind.js"
+      },
+      "void": false
+    },
+    {
+      "slug": "mars",
+      "label": "Mars",
+      "g": 3.71,
+      "sky": [
+        0.6,
+        0.43,
+        0.32
+      ],
+      "horizon": [
+        0.8,
+        0.62,
+        0.46
+      ],
+      "sun": [
+        1.0,
+        0.86,
+        0.72
+      ],
+      "sunElev": 30,
+      "sunAz": 60,
+      "flame": {
+        "height": 0.68,
+        "width": 1.25,
+        "blue": 0.15,
+        "sphere": 0.12,
+        "flicker": 0.6
+      },
+      "facts": [
+        {
+          "k": "Gravity",
+          "v": "3.71 m/s²",
+          "src": "NASA fact sheet"
+        },
+        {
+          "k": "Flame shape",
+          "v": "shorter, wider plume",
+          "src": "schematic"
+        },
+        {
+          "k": "Buoyant velocity",
+          "v": "~0.6× Earth",
+          "src": "unverified"
+        }
+      ],
+      "ground": [
+        0.485,
+        0.184,
+        0.084
+      ],
+      "fogNear": 25,
+      "fogFar": 160,
+      "terrain": {
+        "model": "models/planet_surfaces/mars.glb",
+        "offset": [
+          1.5,
+          -0.242,
+          -4.5
+        ],
+        "src": "Tony's Blender procedural low-poly concept terrain (generate_surfaces.py)"
+      },
+      "void": false
+    },
+    {
+      "slug": "moon",
+      "label": "Moon",
+      "g": 1.62,
+      "sky": [
+        0.006,
+        0.007,
+        0.012
+      ],
+      "horizon": [
+        0.03,
+        0.03,
+        0.038
+      ],
+      "sun": [
+        1.0,
+        0.98,
+        0.95
+      ],
+      "sunElev": 18,
+      "sunAz": 300,
+      "flame": {
+        "height": 0.48,
+        "width": 1.5,
+        "blue": 0.35,
+        "sphere": 0.35,
+        "flicker": 0.35
+      },
+      "facts": [
+        {
+          "k": "Gravity",
+          "v": "1.62 m/s²",
+          "src": "NASA fact sheet"
+        },
+        {
+          "k": "Flame shape",
+          "v": "squat dome",
+          "src": "schematic"
+        },
+        {
+          "k": "Buoyant velocity",
+          "v": "~0.4× Earth",
+          "src": "unverified"
+        }
+      ],
+      "ground": [
+        0.265,
+        0.257,
+        0.252
+      ],
+      "fogNear": 5000,
+      "fogFar": 6000,
+      "terrain": {
+        "model": "models/planet_surfaces/moon.glb",
+        "offset": [
+          3.5,
+          -0.069,
+          -7.0
+        ],
+        "src": "Tony's Blender procedural low-poly concept terrain (generate_surfaces.py)"
+      },
+      "void": false
+    },
+    {
+      "slug": "iss",
+      "label": "ISS",
+      "g": 0.0,
+      "sky": [
+        0,
+        0,
+        0
+      ],
+      "horizon": [
+        0,
+        0,
+        0
+      ],
+      "sun": [
+        0.95,
+        0.97,
+        1.0
+      ],
+      "sunElev": 8,
+      "sunAz": 330,
+      "flame": {
+        "height": 0.3,
+        "width": 1.9,
+        "blue": 0.85,
+        "sphere": 1.0,
+        "flicker": 0.08
+      },
+      "facts": [
+        {
+          "k": "Gravity",
+          "v": "≈ 0 (microgravity)",
+          "src": "NASA"
+        },
+        {
+          "k": "Flame shape",
+          "v": "spherical, dim blue",
+          "src": "NASA FLEX/ACME"
+        },
+        {
+          "k": "Hot gas rises",
+          "v": "no — diffusion only",
+          "src": "NASA FLEX/ACME"
+        }
+      ],
+      "ground": [
+        0,
+        0,
+        0
+      ],
+      "fogNear": 5000,
+      "fogFar": 6000,
+      "terrain": null,
+      "void": true
+    }
+  ]
+}

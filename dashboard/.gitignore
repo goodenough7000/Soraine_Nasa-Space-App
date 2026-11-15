@@ -1,0 +1,10 @@
+node_modules/
+qa/
+*.tar
+*.tar.gz
+.env
+.env.*
+.DS_Store
+Thumbs.db
+.openai/source-workflow/
+source-data/public-experiment-rows.ndjson

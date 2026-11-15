@@ -1,0 +1,44 @@
+[
+  {
+    "name": "dataset_id",
+    "type": "STRING"
+  },
+  {
+    "name": "title",
+    "type": "STRING"
+  },
+  {
+    "name": "source_id",
+    "type": "STRING"
+  },
+  {
+    "name": "source_url",
+    "type": "STRING"
+  },
+  {
+    "name": "source_sha256",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "headers",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "cells",
+    "type": "STRING"
+  },
+  {
+    "name": "record_id",
+    "type": "STRING"
+  },
+  {
+    "name": "csv_record_number",
+    "type": "INTEGER"
+  },
+  {
+    "name": "row_kind",
+    "type": "STRING"
+  }
+]

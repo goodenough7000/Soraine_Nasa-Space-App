@@ -1,0 +1,18 @@
+{
+  "orb": {
+    "provider": "Higgsfield",
+    "model": "seedance_2_5",
+    "generation_job_id": "ab944c77-5719-4afd-a2c0-fc0bfc043f30",
+    "billing_selection": "free_trial_unlimited",
+    "role": "Decorative interface artwork, not a scientific visualization",
+    "video": "public/media/orb-loop.mp4",
+    "poster": "public/media/orb-poster.jpg",
+    "dimensions_px": [512, 512],
+    "duration_seconds": 7.4,
+    "fps": 30,
+    "video_bytes": 407676,
+    "poster_bytes": 23100,
+    "processing": "Trimmed to 8 seconds, crossfaded the final 0.6 seconds into the opening segment, resized and encoded as H.264 with faststart, audio removed.",
+    "fallback": "Original procedural canvas orb in src/Orb.jsx"
+  }
+}

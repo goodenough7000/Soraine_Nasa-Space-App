@@ -1,0 +1,1479 @@
+{
+  "objectId": "sample-wire",
+  "title": "Coated wire sample",
+  "role": "material",
+  "material": {
+    "id": "ldpe-nicr-wire",
+    "label": "LDPE coating on NiCr core",
+    "geometry": "150 mm long; 0.5 mm core diameter; 0.3 mm radial coating thickness",
+    "record_ids": [
+      "li2024-t1-u150-o17",
+      "li2024-t1-u150-o18",
+      "li2024-t1-u150-o19",
+      "li2024-t1-u150-o20",
+      "li2024-t1-u150-o21",
+      "li2024-t1-u60-o17",
+      "li2024-t1-u60-o18",
+      "li2024-t1-u60-o19",
+      "li2024-t1-u60-o20",
+      "li2024-t1-u60-o21",
+      "li2024-t2-p50.7",
+      "li2024-t2-p70.9",
+      "li2024-t2-p101.3",
+      "li2024-t2-p121.6",
+      "li2024-t2-p141.8"
+    ]
+  },
+  "card": {
+    "id": "wire",
+    "title": "LDPE-coated NiCr wire",
+    "summary": "Explore measured flame spread at Martian gravity.",
+    "sections": [
+      {
+        "heading": "What the number describes",
+        "body": "The study follows downward flame spread on a 150 mm wire with a 0.5 mm NiCr core and a 0.3 mm LDPE coating."
+      },
+      {
+        "heading": "An observed mechanism",
+        "body": "Molten coating can move cyclically ahead of the flame. These attached polymer droplets are different from the free water droplets in the galley."
+      }
+    ],
+    "source_ids": [
+      "URL-cc16f45f3ed4"
+    ],
+    "related_object_ids": []
+  },
+  "sceneConditions": {
+    "id": "moon",
+    "label": "Moon",
+    "gravity_nominal_g": 0.16,
+    "gravity_display": "about 1/6 g",
+    "default_atmosphere_id": "illustrative-air",
+    "atmosphere": {
+      "id": "illustrative-air",
+      "label": "Illustrative Earth-like cabin",
+      "oxygen_percent": 21,
+      "oxygen_basis": "volume percent",
+      "pressure_kpa_absolute": 101.325,
+      "airflow_mm_s": null,
+      "basis": "Design preset for an enclosed air-filled habitat. Not a measured Moon or Mars habitat.",
+      "source_ids": [
+        "NTRS-20130010991"
+      ]
+    }
+  },
+  "availableCases": [],
+  "selectedCase": null,
+  "evidenceState": "no_matching_case",
+  "emptyMessage": "No matching test in this collection. Related research is available below.",
+  "measurements": [],
+  "testConditions": [],
+  "relatedFindings": [],
+  "relatedEvidence": [
+    {
+      "id": "li2024-t1-u150-o17",
+      "series": "li2024_table_1",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 1",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 17,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 101.3,
+        "airflow_mm_s": 150
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "extinction",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": null,
+          "unit": "mm/s"
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": null,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": null,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": null,
+          "unit": "s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/0"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition"
+        ],
+        "id": "li2024-t1-u150-o17",
+        "source_table": 1,
+        "pressure_kpa": 101.3,
+        "forced_flow_mm_s": 150,
+        "oxygen_pct": 17,
+        "outcome": "extinction",
+        "repeats_reported": 1,
+        "cycle_period_s": null,
+        "flame_spread_mm_s": null,
+        "droplet_travel_mm": null,
+        "characteristic_time_s": null,
+        "source_symbol": "x"
+      }
+    },
+    {
+      "id": "li2024-t1-u150-o18",
+      "series": "li2024_table_1",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 1",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 18,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 101.3,
+        "airflow_mm_s": 150
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "extinction",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": null,
+          "unit": "mm/s"
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": null,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": null,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": null,
+          "unit": "s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/1"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition"
+        ],
+        "id": "li2024-t1-u150-o18",
+        "source_table": 1,
+        "pressure_kpa": 101.3,
+        "forced_flow_mm_s": 150,
+        "oxygen_pct": 18,
+        "outcome": "extinction",
+        "repeats_reported": 1,
+        "cycle_period_s": null,
+        "flame_spread_mm_s": null,
+        "droplet_travel_mm": null,
+        "characteristic_time_s": null,
+        "source_symbol": "x"
+      }
+    },
+    {
+      "id": "li2024-t1-u150-o19",
+      "series": "li2024_table_1",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 1",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 19,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 101.3,
+        "airflow_mm_s": 150
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "spreading",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": 1.38,
+          "unit": "mm/s",
+          "display_value_mm_s": 1.38
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": 6.25,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": 9.92,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": 7.19,
+          "unit": "s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/2"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition"
+        ],
+        "id": "li2024-t1-u150-o19",
+        "source_table": 1,
+        "pressure_kpa": 101.3,
+        "forced_flow_mm_s": 150,
+        "oxygen_pct": 19,
+        "outcome": "spreading",
+        "repeats_reported": 1,
+        "cycle_period_s": 6.25,
+        "flame_spread_mm_s": 1.38,
+        "droplet_travel_mm": 9.92,
+        "characteristic_time_s": 7.19,
+        "source_symbol": null
+      }
+    },
+    {
+      "id": "li2024-t1-u150-o20",
+      "series": "li2024_table_1",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 1",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 20,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 101.3,
+        "airflow_mm_s": 150
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "spreading",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": 1.51,
+          "unit": "mm/s",
+          "display_value_mm_s": 1.51
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": 3.99,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": 6.82,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": 4.52,
+          "unit": "s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/3"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition"
+        ],
+        "id": "li2024-t1-u150-o20",
+        "source_table": 1,
+        "pressure_kpa": 101.3,
+        "forced_flow_mm_s": 150,
+        "oxygen_pct": 20,
+        "outcome": "spreading",
+        "repeats_reported": 1,
+        "cycle_period_s": 3.99,
+        "flame_spread_mm_s": 1.51,
+        "droplet_travel_mm": 6.82,
+        "characteristic_time_s": 4.52,
+        "source_symbol": null
+      }
+    },
+    {
+      "id": "li2024-t1-u150-o21",
+      "series": "li2024_table_1",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 1",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 21,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 101.3,
+        "airflow_mm_s": 150
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "spreading",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": 1.69,
+          "unit": "mm/s",
+          "display_value_mm_s": 1.69
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": 3.53,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": 6.71,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": 3.97,
+          "unit": "s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/4"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition"
+        ],
+        "id": "li2024-t1-u150-o21",
+        "source_table": 1,
+        "pressure_kpa": 101.3,
+        "forced_flow_mm_s": 150,
+        "oxygen_pct": 21,
+        "outcome": "spreading",
+        "repeats_reported": 1,
+        "cycle_period_s": 3.53,
+        "flame_spread_mm_s": 1.69,
+        "droplet_travel_mm": 6.71,
+        "characteristic_time_s": 3.97,
+        "source_symbol": null
+      }
+    },
+    {
+      "id": "li2024-t1-u60-o17",
+      "series": "li2024_table_1",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 1",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 17,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 101.3,
+        "airflow_mm_s": 60
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "extinction",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": null,
+          "unit": "mm/s"
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": null,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": null,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": null,
+          "unit": "s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/5"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition"
+        ],
+        "id": "li2024-t1-u60-o17",
+        "source_table": 1,
+        "pressure_kpa": 101.3,
+        "forced_flow_mm_s": 60,
+        "oxygen_pct": 17,
+        "outcome": "extinction",
+        "repeats_reported": 1,
+        "cycle_period_s": null,
+        "flame_spread_mm_s": null,
+        "droplet_travel_mm": null,
+        "characteristic_time_s": null,
+        "source_symbol": "x"
+      }
+    },
+    {
+      "id": "li2024-t1-u60-o18",
+      "series": "li2024_table_1",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 1",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 18,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 101.3,
+        "airflow_mm_s": 60
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "spreading",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": 1.22,
+          "unit": "mm/s",
+          "display_value_mm_s": 1.22
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": 7.53,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": 9.55,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": 7.83,
+          "unit": "s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/6"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition"
+        ],
+        "id": "li2024-t1-u60-o18",
+        "source_table": 1,
+        "pressure_kpa": 101.3,
+        "forced_flow_mm_s": 60,
+        "oxygen_pct": 18,
+        "outcome": "spreading",
+        "repeats_reported": 1,
+        "cycle_period_s": 7.53,
+        "flame_spread_mm_s": 1.22,
+        "droplet_travel_mm": 9.55,
+        "characteristic_time_s": 7.83,
+        "source_symbol": null
+      }
+    },
+    {
+      "id": "li2024-t1-u60-o19",
+      "series": "li2024_table_1",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 1",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 19,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 101.3,
+        "airflow_mm_s": 60
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "spreading",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": 1.44,
+          "unit": "mm/s",
+          "display_value_mm_s": 1.44
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": 4.48,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": 6.97,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": 4.84,
+          "unit": "s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/7"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition"
+        ],
+        "id": "li2024-t1-u60-o19",
+        "source_table": 1,
+        "pressure_kpa": 101.3,
+        "forced_flow_mm_s": 60,
+        "oxygen_pct": 19,
+        "outcome": "spreading",
+        "repeats_reported": 1,
+        "cycle_period_s": 4.48,
+        "flame_spread_mm_s": 1.44,
+        "droplet_travel_mm": 6.97,
+        "characteristic_time_s": 4.84,
+        "source_symbol": null
+      }
+    },
+    {
+      "id": "li2024-t1-u60-o20",
+      "series": "li2024_table_1",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 1",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 20,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 101.3,
+        "airflow_mm_s": 60
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "no_experiment",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": null,
+          "unit": "mm/s"
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": null,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": null,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": null,
+          "unit": "s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/8"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition"
+        ],
+        "id": "li2024-t1-u60-o20",
+        "source_table": 1,
+        "pressure_kpa": 101.3,
+        "forced_flow_mm_s": 60,
+        "oxygen_pct": 20,
+        "outcome": "no_experiment",
+        "repeats_reported": 0,
+        "cycle_period_s": null,
+        "flame_spread_mm_s": null,
+        "droplet_travel_mm": null,
+        "characteristic_time_s": null,
+        "source_symbol": "-"
+      }
+    },
+    {
+      "id": "li2024-t1-u60-o21",
+      "series": "li2024_table_1",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 1",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 21,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 101.3,
+        "airflow_mm_s": 60
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "spreading",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": 1.8,
+          "unit": "mm/s",
+          "display_value_mm_s": 1.8
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": 4.28,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": 8.57,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": 4.82,
+          "unit": "s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied.",
+        "At 0.38g, 60 mm/s, 21% oxygen and 101.3 kPa, Table 1 reports 1.80 mm/s and 8.57 mm, whereas Table 2 reports 1.91 mm/s and 8.67 mm. Keep table series separate. Do not average, silently choose a value, or count them as demonstrated independent repeats."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/9"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition",
+          "li_baseline_disagreement"
+        ],
+        "id": "li2024-t1-u60-o21",
+        "source_table": 1,
+        "pressure_kpa": 101.3,
+        "forced_flow_mm_s": 60,
+        "oxygen_pct": 21,
+        "outcome": "spreading",
+        "repeats_reported": 1,
+        "cycle_period_s": 4.28,
+        "flame_spread_mm_s": 1.8,
+        "droplet_travel_mm": 8.57,
+        "characteristic_time_s": 4.82,
+        "source_symbol": null,
+        "same_stated_condition_group": "li2024-60-21-101.3"
+      }
+    },
+    {
+      "id": "li2024-t2-p50.7",
+      "series": "li2024_table_2",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 2",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 21,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 50.7,
+        "airflow_mm_s": 60
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "spreading",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": 2.02,
+          "unit": "mm/s",
+          "display_value_mm_s": 2.02
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": 6.49,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": 16.12,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": 7.98,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_cooling_rate_c_s",
+          "value": 8.8,
+          "unit": "degrees C/s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/10"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition"
+        ],
+        "id": "li2024-t2-p50.7",
+        "source_table": 2,
+        "pressure_kpa": 50.7,
+        "forced_flow_mm_s": 60,
+        "oxygen_pct": 21,
+        "outcome": "spreading",
+        "repeats_reported": 1,
+        "cycle_period_s": 6.49,
+        "flame_spread_mm_s": 2.02,
+        "droplet_travel_mm": 16.12,
+        "characteristic_time_s": 7.98,
+        "droplet_cooling_rate_c_s": 8.8
+      }
+    },
+    {
+      "id": "li2024-t2-p70.9",
+      "series": "li2024_table_2",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 2",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 21,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 70.9,
+        "airflow_mm_s": 60
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "spreading",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": 1.88,
+          "unit": "mm/s",
+          "display_value_mm_s": 1.88
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": 5.41,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": 10.98,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": 5.84,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_cooling_rate_c_s",
+          "value": 13.6,
+          "unit": "degrees C/s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/11"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition"
+        ],
+        "id": "li2024-t2-p70.9",
+        "source_table": 2,
+        "pressure_kpa": 70.9,
+        "forced_flow_mm_s": 60,
+        "oxygen_pct": 21,
+        "outcome": "spreading",
+        "repeats_reported": 1,
+        "cycle_period_s": 5.41,
+        "flame_spread_mm_s": 1.88,
+        "droplet_travel_mm": 10.98,
+        "characteristic_time_s": 5.84,
+        "droplet_cooling_rate_c_s": 13.6
+      }
+    },
+    {
+      "id": "li2024-t2-p101.3",
+      "series": "li2024_table_2",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 2",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 21,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 101.3,
+        "airflow_mm_s": 60
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "spreading",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": 1.91,
+          "unit": "mm/s",
+          "display_value_mm_s": 1.91
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": 4.28,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": 8.67,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": 4.82,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_cooling_rate_c_s",
+          "value": 14.6,
+          "unit": "degrees C/s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied.",
+        "At 0.38g, 60 mm/s, 21% oxygen and 101.3 kPa, Table 1 reports 1.80 mm/s and 8.57 mm, whereas Table 2 reports 1.91 mm/s and 8.67 mm. Keep table series separate. Do not average, silently choose a value, or count them as demonstrated independent repeats."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/12"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition",
+          "li_baseline_disagreement"
+        ],
+        "id": "li2024-t2-p101.3",
+        "source_table": 2,
+        "pressure_kpa": 101.3,
+        "forced_flow_mm_s": 60,
+        "oxygen_pct": 21,
+        "outcome": "spreading",
+        "repeats_reported": 1,
+        "cycle_period_s": 4.28,
+        "flame_spread_mm_s": 1.91,
+        "droplet_travel_mm": 8.67,
+        "characteristic_time_s": 4.82,
+        "droplet_cooling_rate_c_s": 14.6,
+        "same_stated_condition_group": "li2024-60-21-101.3"
+      }
+    },
+    {
+      "id": "li2024-t2-p121.6",
+      "series": "li2024_table_2",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 2",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 21,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 121.6,
+        "airflow_mm_s": 60
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "spreading",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": 1.82,
+          "unit": "mm/s",
+          "display_value_mm_s": 1.82
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": 4.12,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": 8.14,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": 4.47,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_cooling_rate_c_s",
+          "value": 15.4,
+          "unit": "degrees C/s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/13"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition"
+        ],
+        "id": "li2024-t2-p121.6",
+        "source_table": 2,
+        "pressure_kpa": 121.6,
+        "forced_flow_mm_s": 60,
+        "oxygen_pct": 21,
+        "outcome": "spreading",
+        "repeats_reported": 1,
+        "cycle_period_s": 4.12,
+        "flame_spread_mm_s": 1.82,
+        "droplet_travel_mm": 8.14,
+        "characteristic_time_s": 4.47,
+        "droplet_cooling_rate_c_s": 15.4
+      }
+    },
+    {
+      "id": "li2024-t2-p141.8",
+      "series": "li2024_table_2",
+      "evidence_kind": "experimental_result",
+      "source_id": "URL-cc16f45f3ed4",
+      "source_location": "Table 2",
+      "material": "LDPE coating on NiCr core",
+      "material_family": "LDPE coating on NiCr core",
+      "platform": "A310 parabolic flight",
+      "conditions": {
+        "gravity_label": "Mars",
+        "gravity_nominal_g": 0.38,
+        "gravity_plot_estimate_g": null,
+        "gravity_measured_g": null,
+        "oxygen_percent": 21,
+        "oxygen_basis": "oxidizer-stream percent",
+        "oxygen_is_approximate": false,
+        "pressure_psia": null,
+        "pressure_kpa": 141.8,
+        "airflow_mm_s": 60
+      },
+      "measurements": [
+        {
+          "metric": "burning_outcome",
+          "value": "spreading",
+          "unit": null
+        },
+        {
+          "metric": "flame_spread_mm_s",
+          "value": 1.92,
+          "unit": "mm/s",
+          "display_value_mm_s": 1.92
+        },
+        {
+          "metric": "cycle_period_s",
+          "value": 3.99,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_travel_mm",
+          "value": 8.05,
+          "unit": "mm"
+        },
+        {
+          "metric": "characteristic_time_s",
+          "value": 4.2,
+          "unit": "s"
+        },
+        {
+          "metric": "droplet_cooling_rate_c_s",
+          "value": 16.3,
+          "unit": "degrees C/s"
+        }
+      ],
+      "is_approximate": false,
+      "limitations": [
+        "Li et al. report one experiment per condition; no replicate-derived uncertainty interval is supplied."
+      ],
+      "provenance": [
+        {
+          "contributor": "hogan",
+          "input_id": "hogan",
+          "json_pointer": "/mars_wire_results/14"
+        }
+      ],
+      "details": {
+        "source_id": "li2024",
+        "evidence_type": "measured_table",
+        "material": "LDPE coating on NiCr core",
+        "core_diameter_mm": 0.5,
+        "coating_radial_thickness_mm": 0.3,
+        "sample_length_mm": 150,
+        "gravity_g_nominal": 0.38,
+        "gravity_label": "Mars",
+        "platform": "A310 parabolic flight",
+        "partial_gravity_duration_s": 34,
+        "gravity_precision_g_less_than": 0.05,
+        "flow_direction": "upward opposed to downward flame spread",
+        "oxygen_basis": "oxidizer-stream percent",
+        "limitation_ids": [
+          "single_test_per_condition"
+        ],
+        "id": "li2024-t2-p141.8",
+        "source_table": 2,
+        "pressure_kpa": 141.8,
+        "forced_flow_mm_s": 60,
+        "oxygen_pct": 21,
+        "outcome": "spreading",
+        "repeats_reported": 1,
+        "cycle_period_s": 3.99,
+        "flame_spread_mm_s": 1.92,
+        "droplet_travel_mm": 8.05,
+        "characteristic_time_s": 4.2,
+        "droplet_cooling_rate_c_s": 16.3
+      }
+    }
+  ],
+  "comparisonCases": [],
+  "scope": null,
+  "sources": [
+    {
+      "id": "URL-cc16f45f3ed4",
+      "title": "Cyclic pattern along the downward flame spread over cylindrical samples in partial gravity",
+      "url": "https://doi.org/10.1016/j.proci.2024.105255",
+      "alternate_urls": [
+        "https://www.ida.upmc.fr/~seon/paper/Li2024.pdf"
+      ]
+    }
+  ],
+  "animationPolicy": "illustrative_only"
+}

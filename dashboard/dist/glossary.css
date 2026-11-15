@@ -1,0 +1,68 @@
+.science-term {
+  display: inline;
+  appearance: none;
+  padding: 2px 0;
+  margin: -2px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+  vertical-align: baseline;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #8195b1;
+  text-underline-offset: .24em;
+  text-decoration-thickness: 1px;
+  cursor: help;
+}
+.science-term:hover,
+.science-term.science-term-open {
+  color: var(--cyan, #00b7ff);
+  text-decoration-color: currentColor;
+}
+.science-term:focus-visible {
+  outline: 2px solid var(--accent, #168bff);
+  outline-offset: 4px;
+}
+.science-tooltip[hidden] { display: none; }
+.science-tooltip {
+  position: fixed;
+  inset: auto;
+  z-index: 1000;
+  width: 334px;
+  margin: 0;
+  padding: 15px 18px 17px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid #304561;
+  border-top: 2px solid var(--accent, #168bff);
+  border-radius: 0;
+  background: #0b101a;
+  color: var(--text, #f1f2f4);
+  box-shadow: 0 12px 30px #0007;
+  font: 400 12px/1.65 'DM Sans', sans-serif;
+  letter-spacing: normal;
+  text-align: left;
+  text-transform: none;
+  overflow-wrap: anywhere;
+  pointer-events: auto;
+  user-select: text;
+}
+.science-tooltip::backdrop { background: transparent; pointer-events: none; }
+.science-tooltip-title {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text, #f1f2f4);
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+.science-tooltip-body { display: block; color: #c2cad7; }
+@media (pointer: coarse) {
+  .science-term { padding-block: 5px; margin-block: -5px; }
+  .science-tooltip { font-size: 13px; }
+}

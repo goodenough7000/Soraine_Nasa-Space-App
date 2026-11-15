@@ -1,0 +1,23 @@
+{
+  "title": "Soraine: Quiet Orbit",
+  "file": "soraine-quiet-orbit.wav",
+  "duration_seconds": 53.333333333333336,
+  "bytes": 5120044,
+  "format": "PCM signed 16-bit stereo WAV",
+  "sample_rate": 24000,
+  "tempo_bpm": 54,
+  "meter": "3/4",
+  "bars": 16,
+  "peak_dbfs": -5.01,
+  "rms_dbfs": -19.58,
+  "clipped_samples": 0,
+  "finite": true,
+  "boundary_step_left_right": [
+    0.00315086,
+    0.00699822
+  ],
+  "ordinary_adjacent_step_rms": 0.01424366,
+  "minimum_one_second_rms": 0.05358792,
+  "source_recordings": [],
+  "composition": "Original score in scripts/compose-observatory.py"
+}

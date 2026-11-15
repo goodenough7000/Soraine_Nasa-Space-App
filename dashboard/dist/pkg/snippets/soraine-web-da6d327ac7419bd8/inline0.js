@@ -1,0 +1,1 @@
+export function import_module(path) { return import(new URL(path, document.baseURI).href); }
